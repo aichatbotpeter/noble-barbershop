@@ -1,0 +1,1642 @@
+[
+ {
+  "file": "_assets_raw/dense\\d_0001.jpg",
+  "t": 0.0,
+  "eles": 0.4,
+  "vilagos": 3.9,
+  "kontraszt": 1.8,
+  "szin": 0.27
+ },
+ {
+  "file": "_assets_raw/dense\\d_0002.jpg",
+  "t": 0.2,
+  "eles": 6.6,
+  "vilagos": 72.5,
+  "kontraszt": 25.8,
+  "szin": 0.409
+ },
+ {
+  "file": "_assets_raw/dense\\d_0003.jpg",
+  "t": 0.4,
+  "eles": 32.0,
+  "vilagos": 141.6,
+  "kontraszt": 50.5,
+  "szin": 0.409
+ },
+ {
+  "file": "_assets_raw/dense\\d_0004.jpg",
+  "t": 0.6,
+  "eles": 32.4,
+  "vilagos": 146.2,
+  "kontraszt": 52.2,
+  "szin": 0.408
+ },
+ {
+  "file": "_assets_raw/dense\\d_0005.jpg",
+  "t": 0.8,
+  "eles": 28.3,
+  "vilagos": 146.5,
+  "kontraszt": 52.7,
+  "szin": 0.406
+ },
+ {
+  "file": "_assets_raw/dense\\d_0006.jpg",
+  "t": 1.0,
+  "eles": 43.5,
+  "vilagos": 146.6,
+  "kontraszt": 53.2,
+  "szin": 0.406
+ },
+ {
+  "file": "_assets_raw/dense\\d_0007.jpg",
+  "t": 1.2,
+  "eles": 52.9,
+  "vilagos": 147.9,
+  "kontraszt": 53.6,
+  "szin": 0.405
+ },
+ {
+  "file": "_assets_raw/dense\\d_0008.jpg",
+  "t": 1.4,
+  "eles": 113.4,
+  "vilagos": 162.3,
+  "kontraszt": 34.5,
+  "szin": 0.297
+ },
+ {
+  "file": "_assets_raw/dense\\d_0009.jpg",
+  "t": 1.6,
+  "eles": 98.5,
+  "vilagos": 138.6,
+  "kontraszt": 62.1,
+  "szin": 0.154
+ },
+ {
+  "file": "_assets_raw/dense\\d_0010.jpg",
+  "t": 1.8,
+  "eles": 39.3,
+  "vilagos": 139.7,
+  "kontraszt": 65.9,
+  "szin": 0.136
+ },
+ {
+  "file": "_assets_raw/dense\\d_0011.jpg",
+  "t": 2.0,
+  "eles": 122.5,
+  "vilagos": 105.5,
+  "kontraszt": 59.2,
+  "szin": 0.124
+ },
+ {
+  "file": "_assets_raw/dense\\d_0012.jpg",
+  "t": 2.2,
+  "eles": 104.0,
+  "vilagos": 109.3,
+  "kontraszt": 70.3,
+  "szin": 0.177
+ },
+ {
+  "file": "_assets_raw/dense\\d_0013.jpg",
+  "t": 2.4,
+  "eles": 76.9,
+  "vilagos": 108.0,
+  "kontraszt": 65.6,
+  "szin": 0.188
+ },
+ {
+  "file": "_assets_raw/dense\\d_0014.jpg",
+  "t": 2.6,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0015.jpg",
+  "t": 2.8,
+  "eles": 121.5,
+  "vilagos": 149.0,
+  "kontraszt": 64.6,
+  "szin": 0.165
+ },
+ {
+  "file": "_assets_raw/dense\\d_0016.jpg",
+  "t": 3.0,
+  "eles": 180.0,
+  "vilagos": 182.6,
+  "kontraszt": 28.6,
+  "szin": 0.151
+ },
+ {
+  "file": "_assets_raw/dense\\d_0017.jpg",
+  "t": 3.2,
+  "eles": 59.0,
+  "vilagos": 65.4,
+  "kontraszt": 40.9,
+  "szin": 0.098
+ },
+ {
+  "file": "_assets_raw/dense\\d_0018.jpg",
+  "t": 3.4,
+  "eles": 15.3,
+  "vilagos": 34.4,
+  "kontraszt": 22.0,
+  "szin": 0.112
+ },
+ {
+  "file": "_assets_raw/dense\\d_0019.jpg",
+  "t": 3.6,
+  "eles": 1.6,
+  "vilagos": 9.9,
+  "kontraszt": 7.5,
+  "szin": 0.095
+ },
+ {
+  "file": "_assets_raw/dense\\d_0020.jpg",
+  "t": 3.8,
+  "eles": 0.0,
+  "vilagos": 0.2,
+  "kontraszt": 0.4,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0021.jpg",
+  "t": 4.0,
+  "eles": 35.0,
+  "vilagos": 145.7,
+  "kontraszt": 51.7,
+  "szin": 0.411
+ },
+ {
+  "file": "_assets_raw/dense\\d_0022.jpg",
+  "t": 4.2,
+  "eles": 43.2,
+  "vilagos": 146.4,
+  "kontraszt": 53.0,
+  "szin": 0.407
+ },
+ {
+  "file": "_assets_raw/dense\\d_0023.jpg",
+  "t": 4.4,
+  "eles": 46.1,
+  "vilagos": 145.7,
+  "kontraszt": 54.1,
+  "szin": 0.41
+ },
+ {
+  "file": "_assets_raw/dense\\d_0024.jpg",
+  "t": 4.6,
+  "eles": 66.3,
+  "vilagos": 147.0,
+  "kontraszt": 54.0,
+  "szin": 0.408
+ },
+ {
+  "file": "_assets_raw/dense\\d_0025.jpg",
+  "t": 4.8,
+  "eles": 22.4,
+  "vilagos": 148.2,
+  "kontraszt": 52.3,
+  "szin": 0.403
+ },
+ {
+  "file": "_assets_raw/dense\\d_0026.jpg",
+  "t": 5.0,
+  "eles": 60.0,
+  "vilagos": 162.0,
+  "kontraszt": 35.2,
+  "szin": 0.305
+ },
+ {
+  "file": "_assets_raw/dense\\d_0027.jpg",
+  "t": 5.2,
+  "eles": 53.8,
+  "vilagos": 162.6,
+  "kontraszt": 34.7,
+  "szin": 0.3
+ },
+ {
+  "file": "_assets_raw/dense\\d_0028.jpg",
+  "t": 5.4,
+  "eles": 90.8,
+  "vilagos": 162.3,
+  "kontraszt": 34.5,
+  "szin": 0.299
+ },
+ {
+  "file": "_assets_raw/dense\\d_0029.jpg",
+  "t": 5.6,
+  "eles": 91.7,
+  "vilagos": 161.9,
+  "kontraszt": 34.6,
+  "szin": 0.301
+ },
+ {
+  "file": "_assets_raw/dense\\d_0030.jpg",
+  "t": 5.8,
+  "eles": 20.1,
+  "vilagos": 134.2,
+  "kontraszt": 38.6,
+  "szin": 0.348
+ },
+ {
+  "file": "_assets_raw/dense\\d_0031.jpg",
+  "t": 6.0,
+  "eles": 14.9,
+  "vilagos": 138.6,
+  "kontraszt": 40.4,
+  "szin": 0.335
+ },
+ {
+  "file": "_assets_raw/dense\\d_0032.jpg",
+  "t": 6.2,
+  "eles": 10.0,
+  "vilagos": 137.9,
+  "kontraszt": 39.1,
+  "szin": 0.345
+ },
+ {
+  "file": "_assets_raw/dense\\d_0033.jpg",
+  "t": 6.4,
+  "eles": 10.2,
+  "vilagos": 141.7,
+  "kontraszt": 37.9,
+  "szin": 0.329
+ },
+ {
+  "file": "_assets_raw/dense\\d_0034.jpg",
+  "t": 6.6,
+  "eles": 15.8,
+  "vilagos": 147.8,
+  "kontraszt": 42.5,
+  "szin": 0.29
+ },
+ {
+  "file": "_assets_raw/dense\\d_0035.jpg",
+  "t": 6.8,
+  "eles": 105.6,
+  "vilagos": 137.9,
+  "kontraszt": 62.3,
+  "szin": 0.149
+ },
+ {
+  "file": "_assets_raw/dense\\d_0036.jpg",
+  "t": 7.0,
+  "eles": 106.2,
+  "vilagos": 139.1,
+  "kontraszt": 62.1,
+  "szin": 0.152
+ },
+ {
+  "file": "_assets_raw/dense\\d_0037.jpg",
+  "t": 7.2,
+  "eles": 110.7,
+  "vilagos": 140.6,
+  "kontraszt": 61.5,
+  "szin": 0.155
+ },
+ {
+  "file": "_assets_raw/dense\\d_0038.jpg",
+  "t": 7.4,
+  "eles": 141.4,
+  "vilagos": 154.1,
+  "kontraszt": 74.6,
+  "szin": 0.21
+ },
+ {
+  "file": "_assets_raw/dense\\d_0039.jpg",
+  "t": 7.6,
+  "eles": 150.2,
+  "vilagos": 145.3,
+  "kontraszt": 78.7,
+  "szin": 0.204
+ },
+ {
+  "file": "_assets_raw/dense\\d_0040.jpg",
+  "t": 7.8,
+  "eles": 155.8,
+  "vilagos": 145.1,
+  "kontraszt": 78.6,
+  "szin": 0.197
+ },
+ {
+  "file": "_assets_raw/dense\\d_0041.jpg",
+  "t": 8.0,
+  "eles": 157.5,
+  "vilagos": 144.6,
+  "kontraszt": 78.6,
+  "szin": 0.194
+ },
+ {
+  "file": "_assets_raw/dense\\d_0042.jpg",
+  "t": 8.2,
+  "eles": 166.7,
+  "vilagos": 152.9,
+  "kontraszt": 77.7,
+  "szin": 0.192
+ },
+ {
+  "file": "_assets_raw/dense\\d_0043.jpg",
+  "t": 8.4,
+  "eles": 236.5,
+  "vilagos": 191.8,
+  "kontraszt": 69.0,
+  "szin": 0.131
+ },
+ {
+  "file": "_assets_raw/dense\\d_0044.jpg",
+  "t": 8.6,
+  "eles": 272.0,
+  "vilagos": 208.9,
+  "kontraszt": 51.2,
+  "szin": 0.138
+ },
+ {
+  "file": "_assets_raw/dense\\d_0045.jpg",
+  "t": 8.8,
+  "eles": 97.1,
+  "vilagos": 126.6,
+  "kontraszt": 63.5,
+  "szin": 0.215
+ },
+ {
+  "file": "_assets_raw/dense\\d_0046.jpg",
+  "t": 9.0,
+  "eles": 86.1,
+  "vilagos": 133.6,
+  "kontraszt": 69.1,
+  "szin": 0.2
+ },
+ {
+  "file": "_assets_raw/dense\\d_0047.jpg",
+  "t": 9.2,
+  "eles": 43.7,
+  "vilagos": 141.4,
+  "kontraszt": 65.5,
+  "szin": 0.142
+ },
+ {
+  "file": "_assets_raw/dense\\d_0048.jpg",
+  "t": 9.4,
+  "eles": 41.2,
+  "vilagos": 139.9,
+  "kontraszt": 65.9,
+  "szin": 0.138
+ },
+ {
+  "file": "_assets_raw/dense\\d_0049.jpg",
+  "t": 9.6,
+  "eles": 45.0,
+  "vilagos": 139.8,
+  "kontraszt": 66.8,
+  "szin": 0.116
+ },
+ {
+  "file": "_assets_raw/dense\\d_0050.jpg",
+  "t": 9.8,
+  "eles": 42.5,
+  "vilagos": 140.7,
+  "kontraszt": 67.0,
+  "szin": 0.114
+ },
+ {
+  "file": "_assets_raw/dense\\d_0051.jpg",
+  "t": 10.0,
+  "eles": 30.9,
+  "vilagos": 141.2,
+  "kontraszt": 67.8,
+  "szin": 0.112
+ },
+ {
+  "file": "_assets_raw/dense\\d_0052.jpg",
+  "t": 10.2,
+  "eles": 37.8,
+  "vilagos": 138.5,
+  "kontraszt": 68.2,
+  "szin": 0.125
+ },
+ {
+  "file": "_assets_raw/dense\\d_0053.jpg",
+  "t": 10.4,
+  "eles": 38.7,
+  "vilagos": 137.5,
+  "kontraszt": 68.1,
+  "szin": 0.128
+ },
+ {
+  "file": "_assets_raw/dense\\d_0054.jpg",
+  "t": 10.6,
+  "eles": 69.0,
+  "vilagos": 130.5,
+  "kontraszt": 70.0,
+  "szin": 0.183
+ },
+ {
+  "file": "_assets_raw/dense\\d_0055.jpg",
+  "t": 10.8,
+  "eles": 69.0,
+  "vilagos": 133.5,
+  "kontraszt": 69.6,
+  "szin": 0.185
+ },
+ {
+  "file": "_assets_raw/dense\\d_0056.jpg",
+  "t": 11.0,
+  "eles": 40.4,
+  "vilagos": 144.8,
+  "kontraszt": 70.5,
+  "szin": 0.168
+ },
+ {
+  "file": "_assets_raw/dense\\d_0057.jpg",
+  "t": 11.2,
+  "eles": 40.1,
+  "vilagos": 147.1,
+  "kontraszt": 70.3,
+  "szin": 0.168
+ },
+ {
+  "file": "_assets_raw/dense\\d_0058.jpg",
+  "t": 11.4,
+  "eles": 53.4,
+  "vilagos": 156.7,
+  "kontraszt": 68.7,
+  "szin": 0.148
+ },
+ {
+  "file": "_assets_raw/dense\\d_0059.jpg",
+  "t": 11.6,
+  "eles": 134.7,
+  "vilagos": 105.3,
+  "kontraszt": 59.0,
+  "szin": 0.12
+ },
+ {
+  "file": "_assets_raw/dense\\d_0060.jpg",
+  "t": 11.8,
+  "eles": 145.7,
+  "vilagos": 106.1,
+  "kontraszt": 59.7,
+  "szin": 0.12
+ },
+ {
+  "file": "_assets_raw/dense\\d_0061.jpg",
+  "t": 12.0,
+  "eles": 135.8,
+  "vilagos": 106.4,
+  "kontraszt": 60.2,
+  "szin": 0.121
+ },
+ {
+  "file": "_assets_raw/dense\\d_0062.jpg",
+  "t": 12.2,
+  "eles": 156.3,
+  "vilagos": 106.8,
+  "kontraszt": 60.6,
+  "szin": 0.122
+ },
+ {
+  "file": "_assets_raw/dense\\d_0063.jpg",
+  "t": 12.4,
+  "eles": 142.0,
+  "vilagos": 106.8,
+  "kontraszt": 60.8,
+  "szin": 0.122
+ },
+ {
+  "file": "_assets_raw/dense\\d_0064.jpg",
+  "t": 12.6,
+  "eles": 30.4,
+  "vilagos": 137.7,
+  "kontraszt": 73.9,
+  "szin": 0.118
+ },
+ {
+  "file": "_assets_raw/dense\\d_0065.jpg",
+  "t": 12.8,
+  "eles": 31.5,
+  "vilagos": 137.8,
+  "kontraszt": 74.1,
+  "szin": 0.117
+ },
+ {
+  "file": "_assets_raw/dense\\d_0066.jpg",
+  "t": 13.0,
+  "eles": 34.6,
+  "vilagos": 137.8,
+  "kontraszt": 74.2,
+  "szin": 0.117
+ },
+ {
+  "file": "_assets_raw/dense\\d_0067.jpg",
+  "t": 13.2,
+  "eles": 27.9,
+  "vilagos": 138.1,
+  "kontraszt": 74.4,
+  "szin": 0.116
+ },
+ {
+  "file": "_assets_raw/dense\\d_0068.jpg",
+  "t": 13.4,
+  "eles": 30.0,
+  "vilagos": 138.8,
+  "kontraszt": 74.9,
+  "szin": 0.115
+ },
+ {
+  "file": "_assets_raw/dense\\d_0069.jpg",
+  "t": 13.6,
+  "eles": 115.7,
+  "vilagos": 110.1,
+  "kontraszt": 72.7,
+  "szin": 0.171
+ },
+ {
+  "file": "_assets_raw/dense\\d_0070.jpg",
+  "t": 13.8,
+  "eles": 118.9,
+  "vilagos": 106.5,
+  "kontraszt": 71.1,
+  "szin": 0.172
+ },
+ {
+  "file": "_assets_raw/dense\\d_0071.jpg",
+  "t": 14.0,
+  "eles": 123.6,
+  "vilagos": 107.1,
+  "kontraszt": 70.1,
+  "szin": 0.177
+ },
+ {
+  "file": "_assets_raw/dense\\d_0072.jpg",
+  "t": 14.2,
+  "eles": 122.5,
+  "vilagos": 110.3,
+  "kontraszt": 70.5,
+  "szin": 0.179
+ },
+ {
+  "file": "_assets_raw/dense\\d_0073.jpg",
+  "t": 14.4,
+  "eles": 129.9,
+  "vilagos": 112.4,
+  "kontraszt": 70.6,
+  "szin": 0.182
+ },
+ {
+  "file": "_assets_raw/dense\\d_0074.jpg",
+  "t": 14.6,
+  "eles": 103.9,
+  "vilagos": 150.1,
+  "kontraszt": 65.9,
+  "szin": 0.17
+ },
+ {
+  "file": "_assets_raw/dense\\d_0075.jpg",
+  "t": 14.8,
+  "eles": 107.1,
+  "vilagos": 156.2,
+  "kontraszt": 63.6,
+  "szin": 0.162
+ },
+ {
+  "file": "_assets_raw/dense\\d_0076.jpg",
+  "t": 15.0,
+  "eles": 114.8,
+  "vilagos": 154.8,
+  "kontraszt": 63.6,
+  "szin": 0.162
+ },
+ {
+  "file": "_assets_raw/dense\\d_0077.jpg",
+  "t": 15.2,
+  "eles": 87.2,
+  "vilagos": 160.0,
+  "kontraszt": 61.3,
+  "szin": 0.163
+ },
+ {
+  "file": "_assets_raw/dense\\d_0078.jpg",
+  "t": 15.4,
+  "eles": 88.4,
+  "vilagos": 157.1,
+  "kontraszt": 60.8,
+  "szin": 0.17
+ },
+ {
+  "file": "_assets_raw/dense\\d_0079.jpg",
+  "t": 15.6,
+  "eles": 18.4,
+  "vilagos": 142.3,
+  "kontraszt": 65.8,
+  "szin": 0.162
+ },
+ {
+  "file": "_assets_raw/dense\\d_0080.jpg",
+  "t": 15.8,
+  "eles": 15.8,
+  "vilagos": 142.1,
+  "kontraszt": 65.3,
+  "szin": 0.161
+ },
+ {
+  "file": "_assets_raw/dense\\d_0081.jpg",
+  "t": 16.0,
+  "eles": 15.7,
+  "vilagos": 148.4,
+  "kontraszt": 61.9,
+  "szin": 0.163
+ },
+ {
+  "file": "_assets_raw/dense\\d_0082.jpg",
+  "t": 16.2,
+  "eles": 15.3,
+  "vilagos": 150.4,
+  "kontraszt": 59.0,
+  "szin": 0.165
+ },
+ {
+  "file": "_assets_raw/dense\\d_0083.jpg",
+  "t": 16.4,
+  "eles": 92.6,
+  "vilagos": 111.3,
+  "kontraszt": 66.1,
+  "szin": 0.185
+ },
+ {
+  "file": "_assets_raw/dense\\d_0084.jpg",
+  "t": 16.6,
+  "eles": 90.4,
+  "vilagos": 107.5,
+  "kontraszt": 66.8,
+  "szin": 0.181
+ },
+ {
+  "file": "_assets_raw/dense\\d_0085.jpg",
+  "t": 16.8,
+  "eles": 95.3,
+  "vilagos": 106.1,
+  "kontraszt": 68.3,
+  "szin": 0.176
+ },
+ {
+  "file": "_assets_raw/dense\\d_0086.jpg",
+  "t": 17.0,
+  "eles": 97.6,
+  "vilagos": 106.7,
+  "kontraszt": 69.2,
+  "szin": 0.175
+ },
+ {
+  "file": "_assets_raw/dense\\d_0087.jpg",
+  "t": 17.2,
+  "eles": 99.6,
+  "vilagos": 105.8,
+  "kontraszt": 69.1,
+  "szin": 0.174
+ },
+ {
+  "file": "_assets_raw/dense\\d_0088.jpg",
+  "t": 17.4,
+  "eles": 175.1,
+  "vilagos": 122.2,
+  "kontraszt": 77.8,
+  "szin": 0.109
+ },
+ {
+  "file": "_assets_raw/dense\\d_0089.jpg",
+  "t": 17.6,
+  "eles": 203.7,
+  "vilagos": 121.9,
+  "kontraszt": 78.5,
+  "szin": 0.106
+ },
+ {
+  "file": "_assets_raw/dense\\d_0090.jpg",
+  "t": 17.8,
+  "eles": 211.8,
+  "vilagos": 121.6,
+  "kontraszt": 79.1,
+  "szin": 0.104
+ },
+ {
+  "file": "_assets_raw/dense\\d_0091.jpg",
+  "t": 18.0,
+  "eles": 209.0,
+  "vilagos": 120.1,
+  "kontraszt": 79.0,
+  "szin": 0.108
+ },
+ {
+  "file": "_assets_raw/dense\\d_0092.jpg",
+  "t": 18.2,
+  "eles": 197.5,
+  "vilagos": 120.1,
+  "kontraszt": 79.8,
+  "szin": 0.104
+ },
+ {
+  "file": "_assets_raw/dense\\d_0093.jpg",
+  "t": 18.4,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0094.jpg",
+  "t": 18.6,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0095.jpg",
+  "t": 18.8,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0096.jpg",
+  "t": 19.0,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0097.jpg",
+  "t": 19.2,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0098.jpg",
+  "t": 19.4,
+  "eles": 153.9,
+  "vilagos": 104.0,
+  "kontraszt": 70.7,
+  "szin": 0.109
+ },
+ {
+  "file": "_assets_raw/dense\\d_0099.jpg",
+  "t": 19.6,
+  "eles": 155.2,
+  "vilagos": 132.2,
+  "kontraszt": 72.5,
+  "szin": 0.119
+ },
+ {
+  "file": "_assets_raw/dense\\d_0100.jpg",
+  "t": 19.8,
+  "eles": 141.8,
+  "vilagos": 123.6,
+  "kontraszt": 73.1,
+  "szin": 0.115
+ },
+ {
+  "file": "_assets_raw/dense\\d_0101.jpg",
+  "t": 20.0,
+  "eles": 140.7,
+  "vilagos": 106.3,
+  "kontraszt": 70.6,
+  "szin": 0.111
+ },
+ {
+  "file": "_assets_raw/dense\\d_0102.jpg",
+  "t": 20.2,
+  "eles": 10.9,
+  "vilagos": 83.1,
+  "kontraszt": 63.9,
+  "szin": 0.085
+ },
+ {
+  "file": "_assets_raw/dense\\d_0103.jpg",
+  "t": 20.4,
+  "eles": 53.5,
+  "vilagos": 114.4,
+  "kontraszt": 69.2,
+  "szin": 0.128
+ },
+ {
+  "file": "_assets_raw/dense\\d_0104.jpg",
+  "t": 20.6,
+  "eles": 60.0,
+  "vilagos": 124.5,
+  "kontraszt": 70.0,
+  "szin": 0.134
+ },
+ {
+  "file": "_assets_raw/dense\\d_0105.jpg",
+  "t": 20.8,
+  "eles": 56.4,
+  "vilagos": 130.8,
+  "kontraszt": 67.1,
+  "szin": 0.148
+ },
+ {
+  "file": "_assets_raw/dense\\d_0106.jpg",
+  "t": 21.0,
+  "eles": 91.2,
+  "vilagos": 135.8,
+  "kontraszt": 63.2,
+  "szin": 0.173
+ },
+ {
+  "file": "_assets_raw/dense\\d_0107.jpg",
+  "t": 21.2,
+  "eles": 137.7,
+  "vilagos": 149.2,
+  "kontraszt": 65.2,
+  "szin": 0.163
+ },
+ {
+  "file": "_assets_raw/dense\\d_0108.jpg",
+  "t": 21.4,
+  "eles": 143.6,
+  "vilagos": 149.0,
+  "kontraszt": 65.2,
+  "szin": 0.164
+ },
+ {
+  "file": "_assets_raw/dense\\d_0109.jpg",
+  "t": 21.6,
+  "eles": 135.0,
+  "vilagos": 148.4,
+  "kontraszt": 65.4,
+  "szin": 0.163
+ },
+ {
+  "file": "_assets_raw/dense\\d_0110.jpg",
+  "t": 21.8,
+  "eles": 139.2,
+  "vilagos": 145.4,
+  "kontraszt": 66.8,
+  "szin": 0.161
+ },
+ {
+  "file": "_assets_raw/dense\\d_0111.jpg",
+  "t": 22.0,
+  "eles": 147.1,
+  "vilagos": 142.7,
+  "kontraszt": 67.8,
+  "szin": 0.162
+ },
+ {
+  "file": "_assets_raw/dense\\d_0112.jpg",
+  "t": 22.2,
+  "eles": 206.9,
+  "vilagos": 141.0,
+  "kontraszt": 63.2,
+  "szin": 0.186
+ },
+ {
+  "file": "_assets_raw/dense\\d_0113.jpg",
+  "t": 22.4,
+  "eles": 210.8,
+  "vilagos": 139.0,
+  "kontraszt": 62.9,
+  "szin": 0.189
+ },
+ {
+  "file": "_assets_raw/dense\\d_0114.jpg",
+  "t": 22.6,
+  "eles": 214.7,
+  "vilagos": 137.9,
+  "kontraszt": 62.6,
+  "szin": 0.188
+ },
+ {
+  "file": "_assets_raw/dense\\d_0115.jpg",
+  "t": 22.8,
+  "eles": 211.5,
+  "vilagos": 138.3,
+  "kontraszt": 62.8,
+  "szin": 0.183
+ },
+ {
+  "file": "_assets_raw/dense\\d_0116.jpg",
+  "t": 23.0,
+  "eles": 181.5,
+  "vilagos": 137.8,
+  "kontraszt": 61.8,
+  "szin": 0.187
+ },
+ {
+  "file": "_assets_raw/dense\\d_0117.jpg",
+  "t": 23.2,
+  "eles": 243.5,
+  "vilagos": 212.1,
+  "kontraszt": 32.5,
+  "szin": 0.154
+ },
+ {
+  "file": "_assets_raw/dense\\d_0118.jpg",
+  "t": 23.4,
+  "eles": 257.0,
+  "vilagos": 211.9,
+  "kontraszt": 32.9,
+  "szin": 0.155
+ },
+ {
+  "file": "_assets_raw/dense\\d_0119.jpg",
+  "t": 23.6,
+  "eles": 267.5,
+  "vilagos": 211.6,
+  "kontraszt": 33.2,
+  "szin": 0.155
+ },
+ {
+  "file": "_assets_raw/dense\\d_0120.jpg",
+  "t": 23.8,
+  "eles": 275.1,
+  "vilagos": 211.3,
+  "kontraszt": 33.6,
+  "szin": 0.155
+ },
+ {
+  "file": "_assets_raw/dense\\d_0121.jpg",
+  "t": 24.0,
+  "eles": 22.0,
+  "vilagos": 123.6,
+  "kontraszt": 70.6,
+  "szin": 0.177
+ },
+ {
+  "file": "_assets_raw/dense\\d_0122.jpg",
+  "t": 24.2,
+  "eles": 21.1,
+  "vilagos": 129.1,
+  "kontraszt": 70.3,
+  "szin": 0.175
+ },
+ {
+  "file": "_assets_raw/dense\\d_0123.jpg",
+  "t": 24.4,
+  "eles": 22.6,
+  "vilagos": 132.4,
+  "kontraszt": 71.5,
+  "szin": 0.173
+ },
+ {
+  "file": "_assets_raw/dense\\d_0124.jpg",
+  "t": 24.6,
+  "eles": 27.6,
+  "vilagos": 133.3,
+  "kontraszt": 72.8,
+  "szin": 0.167
+ },
+ {
+  "file": "_assets_raw/dense\\d_0125.jpg",
+  "t": 24.8,
+  "eles": 26.2,
+  "vilagos": 137.1,
+  "kontraszt": 73.0,
+  "szin": 0.166
+ },
+ {
+  "file": "_assets_raw/dense\\d_0126.jpg",
+  "t": 25.0,
+  "eles": 140.9,
+  "vilagos": 95.8,
+  "kontraszt": 51.9,
+  "szin": 0.125
+ },
+ {
+  "file": "_assets_raw/dense\\d_0127.jpg",
+  "t": 25.2,
+  "eles": 144.2,
+  "vilagos": 92.8,
+  "kontraszt": 51.1,
+  "szin": 0.121
+ },
+ {
+  "file": "_assets_raw/dense\\d_0128.jpg",
+  "t": 25.4,
+  "eles": 149.9,
+  "vilagos": 83.7,
+  "kontraszt": 49.7,
+  "szin": 0.088
+ },
+ {
+  "file": "_assets_raw/dense\\d_0129.jpg",
+  "t": 25.6,
+  "eles": 166.0,
+  "vilagos": 81.1,
+  "kontraszt": 48.7,
+  "szin": 0.082
+ },
+ {
+  "file": "_assets_raw/dense\\d_0130.jpg",
+  "t": 25.8,
+  "eles": 179.4,
+  "vilagos": 104.3,
+  "kontraszt": 65.1,
+  "szin": 0.098
+ },
+ {
+  "file": "_assets_raw/dense\\d_0131.jpg",
+  "t": 26.0,
+  "eles": 188.3,
+  "vilagos": 104.5,
+  "kontraszt": 65.1,
+  "szin": 0.096
+ },
+ {
+  "file": "_assets_raw/dense\\d_0132.jpg",
+  "t": 26.2,
+  "eles": 186.8,
+  "vilagos": 104.7,
+  "kontraszt": 65.1,
+  "szin": 0.096
+ },
+ {
+  "file": "_assets_raw/dense\\d_0133.jpg",
+  "t": 26.4,
+  "eles": 186.1,
+  "vilagos": 105.6,
+  "kontraszt": 65.1,
+  "szin": 0.095
+ },
+ {
+  "file": "_assets_raw/dense\\d_0134.jpg",
+  "t": 26.6,
+  "eles": 187.8,
+  "vilagos": 106.1,
+  "kontraszt": 65.0,
+  "szin": 0.094
+ },
+ {
+  "file": "_assets_raw/dense\\d_0135.jpg",
+  "t": 26.8,
+  "eles": 182.5,
+  "vilagos": 106.9,
+  "kontraszt": 65.0,
+  "szin": 0.092
+ },
+ {
+  "file": "_assets_raw/dense\\d_0136.jpg",
+  "t": 27.0,
+  "eles": 51.3,
+  "vilagos": 99.1,
+  "kontraszt": 62.9,
+  "szin": 0.129
+ },
+ {
+  "file": "_assets_raw/dense\\d_0137.jpg",
+  "t": 27.2,
+  "eles": 56.6,
+  "vilagos": 92.5,
+  "kontraszt": 59.7,
+  "szin": 0.138
+ },
+ {
+  "file": "_assets_raw/dense\\d_0138.jpg",
+  "t": 27.4,
+  "eles": 76.9,
+  "vilagos": 86.5,
+  "kontraszt": 56.6,
+  "szin": 0.145
+ },
+ {
+  "file": "_assets_raw/dense\\d_0139.jpg",
+  "t": 27.6,
+  "eles": 88.3,
+  "vilagos": 83.4,
+  "kontraszt": 56.4,
+  "szin": 0.142
+ },
+ {
+  "file": "_assets_raw/dense\\d_0140.jpg",
+  "t": 27.8,
+  "eles": 106.2,
+  "vilagos": 80.8,
+  "kontraszt": 55.9,
+  "szin": 0.154
+ },
+ {
+  "file": "_assets_raw/dense\\d_0141.jpg",
+  "t": 28.0,
+  "eles": 137.1,
+  "vilagos": 90.8,
+  "kontraszt": 55.8,
+  "szin": 0.119
+ },
+ {
+  "file": "_assets_raw/dense\\d_0142.jpg",
+  "t": 28.2,
+  "eles": 143.9,
+  "vilagos": 90.5,
+  "kontraszt": 58.8,
+  "szin": 0.121
+ },
+ {
+  "file": "_assets_raw/dense\\d_0143.jpg",
+  "t": 28.4,
+  "eles": 136.4,
+  "vilagos": 94.4,
+  "kontraszt": 60.4,
+  "szin": 0.123
+ },
+ {
+  "file": "_assets_raw/dense\\d_0144.jpg",
+  "t": 28.6,
+  "eles": 131.9,
+  "vilagos": 91.5,
+  "kontraszt": 58.5,
+  "szin": 0.113
+ },
+ {
+  "file": "_assets_raw/dense\\d_0145.jpg",
+  "t": 28.8,
+  "eles": 3.2,
+  "vilagos": 235.3,
+  "kontraszt": 9.8,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0146.jpg",
+  "t": 29.0,
+  "eles": 79.2,
+  "vilagos": 79.9,
+  "kontraszt": 73.6,
+  "szin": 0.003
+ },
+ {
+  "file": "_assets_raw/dense\\d_0147.jpg",
+  "t": 29.2,
+  "eles": 86.0,
+  "vilagos": 80.9,
+  "kontraszt": 73.6,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0148.jpg",
+  "t": 29.4,
+  "eles": 81.4,
+  "vilagos": 81.7,
+  "kontraszt": 74.5,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0149.jpg",
+  "t": 29.6,
+  "eles": 73.7,
+  "vilagos": 81.1,
+  "kontraszt": 73.6,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0150.jpg",
+  "t": 29.8,
+  "eles": 65.0,
+  "vilagos": 82.0,
+  "kontraszt": 72.5,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0151.jpg",
+  "t": 30.0,
+  "eles": 72.1,
+  "vilagos": 80.7,
+  "kontraszt": 72.3,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0152.jpg",
+  "t": 30.2,
+  "eles": 0.8,
+  "vilagos": 243.3,
+  "kontraszt": 4.9,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0153.jpg",
+  "t": 30.4,
+  "eles": 48.6,
+  "vilagos": 66.9,
+  "kontraszt": 55.1,
+  "szin": 0.091
+ },
+ {
+  "file": "_assets_raw/dense\\d_0154.jpg",
+  "t": 30.6,
+  "eles": 63.1,
+  "vilagos": 71.1,
+  "kontraszt": 56.8,
+  "szin": 0.102
+ },
+ {
+  "file": "_assets_raw/dense\\d_0155.jpg",
+  "t": 30.8,
+  "eles": 156.3,
+  "vilagos": 125.3,
+  "kontraszt": 76.3,
+  "szin": 0.114
+ },
+ {
+  "file": "_assets_raw/dense\\d_0156.jpg",
+  "t": 31.0,
+  "eles": 174.1,
+  "vilagos": 126.3,
+  "kontraszt": 76.5,
+  "szin": 0.114
+ },
+ {
+  "file": "_assets_raw/dense\\d_0157.jpg",
+  "t": 31.2,
+  "eles": 169.7,
+  "vilagos": 128.3,
+  "kontraszt": 76.5,
+  "szin": 0.113
+ },
+ {
+  "file": "_assets_raw/dense\\d_0158.jpg",
+  "t": 31.4,
+  "eles": 202.1,
+  "vilagos": 130.0,
+  "kontraszt": 76.5,
+  "szin": 0.113
+ },
+ {
+  "file": "_assets_raw/dense\\d_0159.jpg",
+  "t": 31.6,
+  "eles": 196.1,
+  "vilagos": 130.0,
+  "kontraszt": 76.3,
+  "szin": 0.113
+ },
+ {
+  "file": "_assets_raw/dense\\d_0160.jpg",
+  "t": 31.8,
+  "eles": 210.0,
+  "vilagos": 130.5,
+  "kontraszt": 76.3,
+  "szin": 0.113
+ },
+ {
+  "file": "_assets_raw/dense\\d_0161.jpg",
+  "t": 32.0,
+  "eles": 208.1,
+  "vilagos": 130.3,
+  "kontraszt": 76.1,
+  "szin": 0.112
+ },
+ {
+  "file": "_assets_raw/dense\\d_0162.jpg",
+  "t": 32.2,
+  "eles": 215.0,
+  "vilagos": 130.1,
+  "kontraszt": 76.1,
+  "szin": 0.113
+ },
+ {
+  "file": "_assets_raw/dense\\d_0163.jpg",
+  "t": 32.4,
+  "eles": 212.5,
+  "vilagos": 128.6,
+  "kontraszt": 76.2,
+  "szin": 0.112
+ },
+ {
+  "file": "_assets_raw/dense\\d_0164.jpg",
+  "t": 32.6,
+  "eles": 24.0,
+  "vilagos": 73.5,
+  "kontraszt": 48.3,
+  "szin": 0.178
+ },
+ {
+  "file": "_assets_raw/dense\\d_0165.jpg",
+  "t": 32.8,
+  "eles": 29.9,
+  "vilagos": 75.3,
+  "kontraszt": 50.8,
+  "szin": 0.166
+ },
+ {
+  "file": "_assets_raw/dense\\d_0166.jpg",
+  "t": 33.0,
+  "eles": 25.4,
+  "vilagos": 71.4,
+  "kontraszt": 47.0,
+  "szin": 0.177
+ },
+ {
+  "file": "_assets_raw/dense\\d_0167.jpg",
+  "t": 33.2,
+  "eles": 34.4,
+  "vilagos": 76.3,
+  "kontraszt": 50.8,
+  "szin": 0.158
+ },
+ {
+  "file": "_assets_raw/dense\\d_0168.jpg",
+  "t": 33.4,
+  "eles": 28.0,
+  "vilagos": 72.9,
+  "kontraszt": 47.1,
+  "szin": 0.206
+ },
+ {
+  "file": "_assets_raw/dense\\d_0169.jpg",
+  "t": 33.6,
+  "eles": 22.5,
+  "vilagos": 77.5,
+  "kontraszt": 48.8,
+  "szin": 0.189
+ },
+ {
+  "file": "_assets_raw/dense\\d_0170.jpg",
+  "t": 33.8,
+  "eles": 24.8,
+  "vilagos": 77.0,
+  "kontraszt": 46.9,
+  "szin": 0.204
+ },
+ {
+  "file": "_assets_raw/dense\\d_0171.jpg",
+  "t": 34.0,
+  "eles": 27.5,
+  "vilagos": 84.0,
+  "kontraszt": 50.8,
+  "szin": 0.203
+ },
+ {
+  "file": "_assets_raw/dense\\d_0172.jpg",
+  "t": 34.2,
+  "eles": 25.7,
+  "vilagos": 90.7,
+  "kontraszt": 55.1,
+  "szin": 0.208
+ },
+ {
+  "file": "_assets_raw/dense\\d_0173.jpg",
+  "t": 34.4,
+  "eles": 26.3,
+  "vilagos": 80.6,
+  "kontraszt": 51.2,
+  "szin": 0.209
+ },
+ {
+  "file": "_assets_raw/dense\\d_0174.jpg",
+  "t": 34.6,
+  "eles": 19.7,
+  "vilagos": 133.7,
+  "kontraszt": 45.6,
+  "szin": 0.12
+ },
+ {
+  "file": "_assets_raw/dense\\d_0175.jpg",
+  "t": 34.8,
+  "eles": 28.6,
+  "vilagos": 142.2,
+  "kontraszt": 47.0,
+  "szin": 0.084
+ },
+ {
+  "file": "_assets_raw/dense\\d_0176.jpg",
+  "t": 35.0,
+  "eles": 32.9,
+  "vilagos": 147.6,
+  "kontraszt": 49.0,
+  "szin": 0.064
+ },
+ {
+  "file": "_assets_raw/dense\\d_0177.jpg",
+  "t": 35.2,
+  "eles": 47.1,
+  "vilagos": 146.7,
+  "kontraszt": 53.1,
+  "szin": 0.059
+ },
+ {
+  "file": "_assets_raw/dense\\d_0178.jpg",
+  "t": 35.4,
+  "eles": 54.8,
+  "vilagos": 142.1,
+  "kontraszt": 57.6,
+  "szin": 0.064
+ },
+ {
+  "file": "_assets_raw/dense\\d_0179.jpg",
+  "t": 35.6,
+  "eles": 57.5,
+  "vilagos": 136.6,
+  "kontraszt": 60.9,
+  "szin": 0.075
+ },
+ {
+  "file": "_assets_raw/dense\\d_0180.jpg",
+  "t": 35.8,
+  "eles": 60.6,
+  "vilagos": 131.2,
+  "kontraszt": 63.0,
+  "szin": 0.088
+ },
+ {
+  "file": "_assets_raw/dense\\d_0181.jpg",
+  "t": 36.0,
+  "eles": 64.8,
+  "vilagos": 125.1,
+  "kontraszt": 65.0,
+  "szin": 0.091
+ },
+ {
+  "file": "_assets_raw/dense\\d_0182.jpg",
+  "t": 36.2,
+  "eles": 57.4,
+  "vilagos": 116.6,
+  "kontraszt": 66.1,
+  "szin": 0.09
+ },
+ {
+  "file": "_assets_raw/dense\\d_0183.jpg",
+  "t": 36.4,
+  "eles": 61.6,
+  "vilagos": 106.4,
+  "kontraszt": 66.0,
+  "szin": 0.091
+ },
+ {
+  "file": "_assets_raw/dense\\d_0184.jpg",
+  "t": 36.6,
+  "eles": 203.0,
+  "vilagos": 0.9,
+  "kontraszt": 11.7,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0185.jpg",
+  "t": 36.8,
+  "eles": 214.3,
+  "vilagos": 0.9,
+  "kontraszt": 11.9,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0186.jpg",
+  "t": 37.0,
+  "eles": 214.7,
+  "vilagos": 0.9,
+  "kontraszt": 12.0,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0187.jpg",
+  "t": 37.2,
+  "eles": 213.3,
+  "vilagos": 0.9,
+  "kontraszt": 12.1,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0188.jpg",
+  "t": 37.4,
+  "eles": 209.8,
+  "vilagos": 0.9,
+  "kontraszt": 12.2,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0189.jpg",
+  "t": 37.6,
+  "eles": 221.1,
+  "vilagos": 1.0,
+  "kontraszt": 12.4,
+  "szin": 0.001
+ },
+ {
+  "file": "_assets_raw/dense\\d_0190.jpg",
+  "t": 37.8,
+  "eles": 242.3,
+  "vilagos": 1.0,
+  "kontraszt": 12.5,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0191.jpg",
+  "t": 38.0,
+  "eles": 240.9,
+  "vilagos": 1.0,
+  "kontraszt": 12.6,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0192.jpg",
+  "t": 38.2,
+  "eles": 246.5,
+  "vilagos": 1.0,
+  "kontraszt": 12.8,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0193.jpg",
+  "t": 38.4,
+  "eles": 237.7,
+  "vilagos": 1.0,
+  "kontraszt": 12.9,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0194.jpg",
+  "t": 38.6,
+  "eles": 249.4,
+  "vilagos": 1.0,
+  "kontraszt": 13.1,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0195.jpg",
+  "t": 38.8,
+  "eles": 250.1,
+  "vilagos": 1.0,
+  "kontraszt": 13.1,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0196.jpg",
+  "t": 39.0,
+  "eles": 240.4,
+  "vilagos": 1.1,
+  "kontraszt": 13.2,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0197.jpg",
+  "t": 39.2,
+  "eles": 232.2,
+  "vilagos": 1.1,
+  "kontraszt": 13.3,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0198.jpg",
+  "t": 39.4,
+  "eles": 255.8,
+  "vilagos": 1.1,
+  "kontraszt": 13.4,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0199.jpg",
+  "t": 39.6,
+  "eles": 261.7,
+  "vilagos": 1.1,
+  "kontraszt": 13.5,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0200.jpg",
+  "t": 39.8,
+  "eles": 257.4,
+  "vilagos": 1.1,
+  "kontraszt": 13.6,
+  "szin": 0.002
+ },
+ {
+  "file": "_assets_raw/dense\\d_0201.jpg",
+  "t": 40.0,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0202.jpg",
+  "t": 40.2,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0203.jpg",
+  "t": 40.4,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0204.jpg",
+  "t": 40.6,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ },
+ {
+  "file": "_assets_raw/dense\\d_0205.jpg",
+  "t": 40.8,
+  "eles": 0.0,
+  "vilagos": 0.0,
+  "kontraszt": 0.0,
+  "szin": 0.0
+ }
+]
