@@ -66,6 +66,23 @@ export default function About() {
           </a>
         </Reveal>
 
+        {/* Asztali nézetben mozgókép a fogadtatásról, mobilon a portré —
+            így telefonon nem tölt le feleslegesen videót. */}
+        {site.aboutVideo && (
+          <Reveal delay={80} className="mt-20 hidden md:block">
+            <video
+              className="mx-auto w-full max-w-3xl object-cover shadow-xl"
+              src={asset(site.aboutVideo)}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              aria-hidden="true"
+            />
+          </Reveal>
+        )}
+
         <Reveal delay={80} className="mt-20">
           <div className="mx-auto w-full max-w-md">
             <div className="relative aspect-square overflow-hidden">

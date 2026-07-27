@@ -12,11 +12,13 @@ export const site = {
   city: "Kecskemét",
 
   /**
-   * Hero-videó. Ha van felvétel a szalonról, tedd a fájlt a
-   * `public/videos/hero.mp4`-be, és írd ide: "/videos/hero.mp4".
-   * Amíg `null`, a hero a névfal-fotót mozgatja (Ken Burns).
+   * Hero-videó — a szalon saját reklámfilmjéből vágott, hang nélküli montázs
+   * (olló, hajmosás, stílusozás). Ha `null`, a hero a névfal-fotót mozgatja.
    */
-  heroVideo: null as string | null,
+  heroVideo: "/videos/hero.mp4" as string | null,
+
+  /** Rövidebb betét a Rólunk szekcióban (fogadtatás + kávé). Csak asztali nézetben. */
+  aboutVideo: "/videos/about.mp4" as string | null,
 
   /** A hero főcíme — kisbetűs, két tagmondat. */
   heroHeadline: "nyugodt tempó, pontos vágás",
@@ -24,9 +26,8 @@ export const site = {
     "Férfi fodrászat és barbershop Kecskemét szívében. Egyszerre egy vendég, " +
     "foglalt időpontra — hogy a végén tényleg az legyen, amit szerettél volna.",
 
-  // Ez a gomb célja mindenhol. Amint elkészül a saját foglalórendszer,
-  // ezt kell "/foglalas"-ra átírni — több helyen nem kell nyúlni semmihez.
-  bookingUrl: "https://noble-barbershop-david.salonic.hu",
+  // Saját foglalórendszer (a Salonicot leváltotta).
+  bookingUrl: "/foglalas",
 
   contact: {
     phone: "+36 30 483 8786",

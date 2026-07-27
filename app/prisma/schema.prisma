@@ -1,0 +1,75 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Prisma 7-ben a kapcsolati URL már NEM itt van, hanem a prisma.config.ts-ben
+// (migrációhoz) és a PrismaClient adapterében (futásidőben).
+datasource db {
+  provider = "postgresql"
+}
+
+enum BookingStatus {
+  PENDING // beérkezett, Dávid jóváhagyására vár
+  CONFIRMED // Dávid visszaigazolta
+  REJECTED // Dávid elutasította
+  CANCELLED // a vendég mondta le
+}
+
+model Booking {
+  id String @id @default(cuid())
+
+  // A szolgáltatás adatait lemásoljuk a foglalásra, hogy egy későbbi
+  // ár- vagy időtartam-változás ne írja át visszamenőleg a régi foglalásokat.
+  serviceName  String
+  servicePrice Int
+  durationMin  Int
+
+  startsAt DateTime
+  endsAt   DateTime
+
+  customerName String
+  phone        String
+  email        String
+  note         String?
+
+  status BookingStatus @default(PENDING)
+
+  // A vendég tokenje: megtekintés és lemondás. Ez megy a vendég levelébe.
+  manageToken String @unique @default(cuid())
+
+  // Dávid tokenje: visszaigazolás és elutasítás. KÜLÖN token, hogy a vendég
+  // ne tudja saját magát visszaigazolni.
+  ownerToken String @unique @default(cuid())
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  decidedAt   DateTime?
+  cancelledAt DateTime?
+
+  @@index([startsAt])
+  @@index([status, startsAt])
+}
+
+/// Heti alap-nyitvatartás. A percek éjféltől számítanak (480 = 08:00).
+model WeeklyHour {
+  dayOfWeek Int     @id // ISO: 1 = hétfő ... 7 = vasárnap
+  isOpen    Boolean @default(true)
+  openMin   Int     @default(480)
+  closeMin  Int     @default(1140)
+}
+
+/// Egy konkrét napra szóló kivétel (szabadság, ünnep, eltérő nyitvatartás).
+/// Felülírja az adott nap heti alapbeállítását.
+model DateOverride {
+  date     DateTime @id @db.Date
+  isClosed Boolean  @default(true)
+  openMin  Int?
+  closeMin Int?
+  note     String?
+}
+
+/// Egyszerű kulcs-érték beállítások (értesítési e-mail cím stb.).
+model Setting {
+  key   String @id
+  value String
+}

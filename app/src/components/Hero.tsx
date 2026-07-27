@@ -18,8 +18,10 @@ export default function Hero() {
             muted
             loop
             playsInline
+            preload="metadata"
+            aria-hidden="true"
             // A poszter addig látszik, amíg a videó első kockája megjön
-            poster={asset("/images/shop-wall.jpg")}
+            poster={asset("/images/hero-poster.jpg")}
           />
         ) : (
           // Videó híján a névfal-fotó lassan mozog — így a hero nem hat állóképnek.
