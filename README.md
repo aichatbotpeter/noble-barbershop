@@ -3,9 +3,38 @@
 Egyoldalas bemutatkozó weboldal a kecskeméti **NOBLE | Barbershop**-nak
 (tulajdonos: **Széman Dávid**).
 
+**Élő előnézet:** https://aichatbotpeter.github.io/noble-barbershop/
+
 - **Kód:** `app/` — Next.js 16.2 (App Router) + React 19 + TypeScript + Tailwind v4
 - **Indítás:** `cd app && npm run dev` → http://localhost:3000
-- **Build:** `cd app && npm run build` (minden route statikusan előrenderelt)
+- **Build:** `cd app && npm run build` (statikus export az `app/out/`-ba)
+
+## Élesítés (GitHub Pages)
+
+A Pages a `main` ág **`docs/`** mappáját szolgálja ki. Változtatás után:
+
+```bash
+cd app
+MSYS_NO_PATHCONV=1 \
+NEXT_PUBLIC_BASE_PATH=/noble-barbershop \
+NEXT_PUBLIC_SITE_URL=https://aichatbotpeter.github.io/noble-barbershop \
+npm run build
+
+cd ..
+rm -rf docs && cp -r app/out docs && touch docs/.nojekyll
+git add -A && git commit -m "..." && git push
+```
+
+Két buktató, amibe már belefutottunk:
+
+1. **`MSYS_NO_PATHCONV=1` kötelező** Git Bash alatt, különben a `/noble-barbershop`
+   basePath-ból `C:/Program Files/Git/noble-barbershop` lesz.
+2. **Képek:** a `next/image` `unoptimized` módban hidratálás után elhagyja a
+   basePath-t, ezért minden statikus fájl az `app/src/lib/asset.ts` `asset()`
+   függvényén megy át. Új képnél is ezt kell használni.
+
+Saját domain esetén a `NEXT_PUBLIC_BASE_PATH` elhagyható (üres), és a Pages
+beállításnál meg kell adni a domaint.
 
 ## Hol mit találsz
 
@@ -56,8 +85,8 @@ A feldolgozott változatok az `app/public/images/` alatt vannak:
 1. **Galéria-fotók** — a profi fotózás anyaga (pic-time). A fájlokat az
    `app/public/images/gallery/` mappába kell tenni, és felvenni a
    `gallery.ts`-be. A pic-time nem engedi a letöltést, ügyfélként kell lementeni.
-2. **Dávid portréja** — jobb felbontásban, ugyanabból a fotózásból.
-3. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
+   Amíg üres, a Galéria szekció Instagram-CTA-ként jelenik meg.
+2. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
    értékelést tilos valódiként közölni (Fttv.).
 4. **Saját foglalórendszer** — jelenleg minden gomb a Salonicra visz
    (`site.bookingUrl`). A saját foglaló elkészültekor ezt kell `/foglalas`-ra
