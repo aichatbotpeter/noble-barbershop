@@ -33,25 +33,47 @@ export default function Gallery() {
         </Reveal>
 
         {hasPhotos ? (
-          // 2×2 fekete-fehér rács, hoverre visszaszíneződik — a referencia mintája
-          <div className="mt-16 grid gap-4 sm:gap-6 md:grid-cols-2">
-            {galleryImages.map((img, i) => (
-              <Reveal key={img.src} delay={(i % 2) * 120} from={i % 2 ? "right" : "left"}>
-                <div className="group relative aspect-[4/3] overflow-hidden">
-                  <Image
-                    src={asset(img.src)}
-                    alt={img.alt}
-                    fill
-                    sizes="(max-width: 768px) 92vw, 560px"
-                    className="object-cover grayscale transition-all duration-[900ms] ease-out group-hover:scale-[1.06] group-hover:grayscale-0"
-                  />
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <>
+            {/* A képek SZÍNESEN jelennek meg — hoverre finoman ráközelítenek. */}
+            <div className="mt-16 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+              {galleryImages.map((img, i) => (
+                <Reveal
+                  key={img.src}
+                  delay={(i % 3) * 90}
+                  from={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"}
+                >
+                  <figure className="group relative aspect-[4/3] overflow-hidden bg-black">
+                    <Image
+                      src={asset(img.src)}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 368px"
+                      className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.07]"
+                    />
+                  </figure>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal>
+              <div className="mt-14 text-center">
+                <p className="text-base text-white/70">
+                  A friss munkák az Instagramon frissülnek.
+                </p>
+                <a
+                  href={site.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-light mt-6"
+                >
+                  <InstagramIcon className="h-5 w-5" />
+                  {site.social.instagramHandle}
+                </a>
+              </div>
+            </Reveal>
+          </>
         ) : (
-          // Amíg nincsenek fotók, az Instagram viszi a szekciót — így nem marad
-          // üres rács. A képek bemásolásakor magától átvált a fenti ágra.
+          // Amíg nincsenek fotók, az Instagram viszi a szekciót.
           <Reveal delay={90}>
             <p className="mx-auto mt-8 max-w-xl text-center text-base leading-relaxed text-white/70 sm:text-lg">
               A friss munkák, fazonok és a szalon mindennapjai az Instagramon
