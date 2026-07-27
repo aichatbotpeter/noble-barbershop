@@ -16,3 +16,8 @@ app/out/
 .DS_Store
 Thumbs.db
 *.log
+
+# titkok
+_assets_raw/.pgpass.txt
+_assets_raw/promo.mov
+_assets_raw/frames/
