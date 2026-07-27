@@ -1,0 +1,18 @@
+# függőségek
+node_modules/
+
+# Next.js build-köztes állomány
+app/.next/
+app/out/
+
+# a kiszolgált statikus oldal a docs/ mappában van — az NEM ignorált
+
+# környezeti változók
+.env
+.env.local
+.env*.local
+
+# szerkesztő / OS
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------
+   NOBLE | Barbershop — design tokens
+
+   Az irány a fadedbarbershopbp.com-ot követi: világos, levegős,
+   fotó-vezérelt felület, Montserrat címekkel és DM Sans szöveggel.
+   A NOBLE-től az arany akcent marad (a logó ollójából mintavételezve).
+------------------------------------------------------------------ */
+@theme {
+  --color-ink: #1d1e20; /* alap szövegszín */
+  --color-ink-soft: #6b6d72; /* másodlagos szöveg */
+  --color-bar: #101a16; /* sötét fejléc / sötét szekciók */
+  --color-paper: #ffffff;
+  --color-mist: #d7d9e0; /* a hero hűvös világos alaptónusa */
+  --color-line: #e4e5e9;
+
+  --color-gold: #a88858;
+  --color-gold-light: #c8a472;
+
+  --font-display: var(--font-montserrat), system-ui, sans-serif;
+  --font-sans: var(--font-dmsans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; /* a fix fejléc ne takarja az ugrás célját */
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   Tipográfia
+------------------------------------------------------------------ */
+
+/* Szekciócím: Montserrat 600, KISBETŰS mondatkezdés — nem verzál. */
+.h-section {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.h-hero {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.25rem, 6.2vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+/* Navigációs és gomb-felirat: ritkított verzál */
+.nav-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Ár: Montserrat 900, a referencia szerint */
+.price {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------------
+   Gombok — tömör, szögletes, nagy kattintófelület
+------------------------------------------------------------------ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.05rem 2.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn-dark {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.btn-dark:hover {
+  background: var(--color-gold);
+}
+
+.btn-light {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+.btn-light:hover {
+  background: var(--color-gold);
+  color: var(--color-paper);
+}
+
+.btn-ghost {
+  border: 1px solid currentColor;
+}
+.btn-ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+}
+
+/* ------------------------------------------------------------------
+   Belépő animáció (IntersectionObserver kapcsolja)
+------------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
