@@ -20,7 +20,7 @@ export default function About() {
         {/* Fotó — asztali nézetben a bal szélig kifut */}
         <Reveal from="left" className="relative min-h-[60vh] lg:min-h-[92vh]">
           <Image
-            src={asset("/images/about-david.jpg")}
+            src={asset("/images/rolunk-szeman-david.jpg")}
             alt="Széman Dávid munka közben a NOBLE Barbershopban"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
