@@ -1,6 +1,5 @@
-[0:v]trim=start=2.2:end=5.3,setpts=PTS-STARTPTS[a];
-[0:v]trim=start=13.6:end=17.2,setpts=PTS-STARTPTS[b];
-[0:v]trim=start=22.2:end=25.4,setpts=PTS-STARTPTS[c];
-[0:v]trim=start=29.6:end=33.2,setpts=PTS-STARTPTS[d];
-[a][b][c][d]concat=n=4:v=1:a=0[cat];
-[cat]scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,fade=t=in:st=0:d=0.6,fade=t=out:st=12.9:d=0.6,format=yuv420p[out]
+[0:v]trim=start=13.9:end=17.2,setpts=PTS-STARTPTS[a];
+[0:v]trim=start=29.8:end=33.1,setpts=PTS-STARTPTS[b];
+[0:v]trim=start=25.6:end=28.2,setpts=PTS-STARTPTS[c];
+[a][b][c]concat=n=3:v=1:a=0[cat];
+[cat]scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720,fade=t=in:st=0:d=0.5,fade=t=out:st=8.7:d=0.5,format=yuv420p[out]
