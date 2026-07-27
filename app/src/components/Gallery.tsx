@@ -34,21 +34,30 @@ export default function Gallery() {
 
         {hasPhotos ? (
           <>
-            {/* A képek SZÍNESEN jelennek meg — hoverre finoman ráközelítenek. */}
-            <div className="mt-16 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+            {/*
+              A képek SZÍNESEN és a saját 16:9 arányukban jelennek meg — nincs
+              négyzetes/4:3-as vágás, mert a forrás (a reklámfilm kockái) 16:9,
+              és a kényszerített arány levágná a kompozíció szélét.
+
+              Két oszlop, hogy elég nagyok legyenek: így egy kép ~570 CSS px,
+              retina kijelzőn ~1140 px — ezt az 1280 px-es forrás még fedi,
+              tehát nem lesz felnagyítva.
+            */}
+            <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
               {galleryImages.map((img, i) => (
                 <Reveal
                   key={img.src}
-                  delay={(i % 3) * 90}
-                  from={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"}
+                  delay={(i % 2) * 110}
+                  from={i % 2 === 0 ? "left" : "right"}
                 >
-                  <figure className="group relative aspect-[4/3] overflow-hidden bg-black">
+                  <figure className="group relative aspect-video overflow-hidden bg-black">
                     <Image
                       src={asset(img.src)}
                       alt={img.alt}
                       fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 368px"
-                      className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.07]"
+                      quality={90}
+                      sizes="(max-width: 640px) 92vw, (max-width: 1152px) 48vw, 570px"
+                      className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                     />
                   </figure>
                 </Reveal>
