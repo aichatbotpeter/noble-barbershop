@@ -20,7 +20,7 @@ export const galleryImages: GalleryImage[] = [
   { src: `${dir}/02-bejarat-noble-tabla.jpg`, alt: "A szalon bejárata a NOBLE táblával" },
   { src: `${dir}/03-hajmosas-kozeli.jpg`, alt: "Hajmosás a mosdótálnál" },
   { src: `${dir}/04-noble-nevfal.jpg`, alt: "A NOBLE névfal a szalonban" },
-  { src: `${dir}/05-szaritas.jpg`, alt: "Széman Dávid szárítás és formázás közben" },
+  { src: `${dir}/05-szalon-belso.jpg`, alt: "A szalon belső tere" },
   { src: `${dir}/06-barber-szek.jpg`, alt: "Barber szék a tükör előtt" },
   { src: `${dir}/07-hajmosas.jpg`, alt: "Vendég hajmosás közben" },
   { src: `${dir}/08-eszkozok.jpg`, alt: "A barber eszközei a pulton" },

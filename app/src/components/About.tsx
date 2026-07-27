@@ -21,7 +21,7 @@ export default function About() {
         <Reveal from="left" className="relative min-h-[60vh] lg:min-h-[92vh]">
           <Image
             src={asset("/images/about-david.jpg")}
-            alt="Vendég kávéval a NOBLE Barbershopban"
+            alt="Széman Dávid munka közben a NOBLE Barbershopban"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"
             className="object-cover"
