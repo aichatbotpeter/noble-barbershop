@@ -1,40 +1,34 @@
-# NOBLE | Barbershop — weboldal
+# NOBLE | Barbershop — weboldal + foglalórendszer
 
-Egyoldalas bemutatkozó weboldal a kecskeméti **NOBLE | Barbershop**-nak
-(tulajdonos: **Széman Dávid**).
+Weboldal és saját időpontfoglaló a kecskeméti **NOBLE | Barbershop**-nak
+(tulajdonos: **Széman Dávid**). A Salonicot leváltotta.
 
-**Élő előnézet:** https://aichatbotpeter.github.io/noble-barbershop/
+**Élő:** https://web-production-f3e71.up.railway.app
+**Admin:** `/admin` (jelszó: `ADMIN_PASSWORD` env-változó)
 
-- **Kód:** `app/` — Next.js 16.2 (App Router) + React 19 + TypeScript + Tailwind v4
-- **Indítás:** `cd app && npm run dev` → http://localhost:3000
-- **Build:** `cd app && npm run build` (statikus export az `app/out/`-ba)
+- **Kód:** `app/` — Next.js 16 + React 19 + TypeScript + Tailwind v4 + Prisma 7 + PostgreSQL
+- **Indítás:** `cd app && npm run dev`
+- **Adatbázis első beállítása:** `npm run db:setup`
+- **Foglalási szabályok tesztje:** `npm run test:booking [url]`
 
-## Élesítés (GitHub Pages)
+## Élesítés (Railway)
 
-A Pages a `main` ág **`docs/`** mappáját szolgálja ki. Változtatás után:
+A `web` service a `aichatbotpeter/noble-barbershop` repóból épül, gyökérmappa `app`.
+**A GitHub push NEM indít automatikus deploy-t** — kézzel kell elindítani a
+Railway felületén, vagy GraphQL-lel:
 
-```bash
-cd app
-MSYS_NO_PATHCONV=1 \
-NEXT_PUBLIC_BASE_PATH=/noble-barbershop \
-NEXT_PUBLIC_SITE_URL=https://aichatbotpeter.github.io/noble-barbershop \
-npm run build
-
-cd ..
-rm -rf docs && cp -r app/out docs && touch docs/.nojekyll
-git add -A && git commit -m "..." && git push
+```
+mutation { serviceInstanceDeployV2(environmentId: "<env>", serviceId: "<web>") }
 ```
 
-Két buktató, amibe már belefutottunk:
+## Dupla foglalás elleni védelem
 
-1. **`MSYS_NO_PATHCONV=1` kötelező** Git Bash alatt, különben a `/noble-barbershop`
-   basePath-ból `C:/Program Files/Git/noble-barbershop` lesz.
-2. **Képek:** a `next/image` `unoptimized` módban hidratálás után elhagyja a
-   basePath-t, ezért minden statikus fájl az `app/src/lib/asset.ts` `asset()`
-   függvényén megy át. Új képnél is ezt kell használni.
-
-Saját domain esetén a `NEXT_PUBLIC_BASE_PATH` elhagyható (üres), és a Pages
-beállításnál meg kell adni a domaint.
+Három rétegben:
+1. a szabad időpontok listája már nem kínálja a foglalt réseket,
+2. a `POST /api/bookings` a szerveren újraszámolja és ellenőrzi,
+3. **az adatbázisban egy kizáró megszorítás** (`EXCLUDE USING gist ... WITH &&`)
+   — ez az egyetlen, ami versenyhelyzetben is véd, ha két kérés ezredmásodpercen
+   belül fut be ugyanarra a résre. A `scripts/setup-db.mjs` hozza létre.
 
 ## Hol mit találsz
 
@@ -67,30 +61,36 @@ levegős, fotó-vezérelt felület. Szekciórend: hero → Rólunk → Áraink �
 > kaliforniai `fadedbarbershop.com` alapján — azt a user elvetette. Ha valaha
 > előkerül, a git-előzményben megvan.
 
-**Hero:** a szalon névfala erős ráközelítéssel, alulról sötétedő átmenettel. A
-nagy NOBLE betűk grafikus háttérként működnek. Ha lesz jobb belső fotó vagy
-videó, a `Hero.tsx`-ben cserélhető.
+**Hero:** a szalon reklámfilmjéből vágott, néma, loopoló montázs
+(`public/videos/hero.mp4`). Ha nincs videó (`site.heroVideo = null`), a hero
+a névfal-fotót mozgatja lassan (Ken Burns).
+
+**Mozgás:** parallax hátterek (`Parallax.tsx`), irányfüggő és lépcsőzetes
+belépő animációk (`Reveal.tsx`). Csökkentett mozgás beállításnál mind kikapcsol.
 
 ## Arculati fájlok
 
-`_assets_raw/` — az eredeti, feldolgozatlan fájlok (a szalon Salonic-profiljából).
-A feldolgozott változatok az `app/public/images/` alatt vannak:
+`_assets_raw/` — eredeti, feldolgozatlan anyagok (nincs verziókövetve: a promo
+videó és a kockák kimaradnak). A feldolgozott változatok az `app/public/` alatt:
 
-- `noble-logo.png` — a logó, fekete háttér nélkül (átlátszó)
-- `shop-wall.jpg` — a szalon névfala
-- `david.jpg` — Széman Dávid portréja (⚠️ csak 160px-es forrás, cserélendő)
+- `images/noble-logo.png` / `noble-logo-dark.png` — logó sötét, ill. világos háttérre
+- `images/shop-wall.jpg` — a névfal profi felvétele (1600×1067)
+- `images/david.jpg` — Széman Dávid portréja (720×720)
+- `images/gallery/*.jpg` — 6 állókép a reklámfilmből
+- `videos/hero.mp4`, `videos/about.mp4` — H.264, néma
+
+A kapott `.mov` HEVC volt, amit a böngészők nem játszanak le — ffmpeggel
+kódoltuk át H.264-re.
 
 ## Ami még hátravan
 
-1. **Galéria-fotók** — a profi fotózás anyaga (pic-time). A fájlokat az
-   `app/public/images/gallery/` mappába kell tenni, és felvenni a
-   `gallery.ts`-be. A pic-time nem engedi a letöltést, ügyfélként kell lementeni.
-   Amíg üres, a Galéria szekció Instagram-CTA-ként jelenik meg.
-2. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
+1. **⚠️ E-mail küldés** — a `RESEND_API_KEY` üres, ezért MOST NEM MEGY KI levél
+   (a foglalás létrejön, a kód csak logol). Kell egy Resend kulcs és egy igazolt
+   feladó-domain, majd a `RESEND_API_KEY` + `RESEND_FROM` beállítása a Railwayen.
+2. **Értesítési e-mail cím** — Dávidnak az `/admin` oldalon be kell írnia, hova
+   kérje a foglalás-értesítőket.
+3. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
    értékelést tilos valódiként közölni (Fttv.).
-4. **Saját foglalórendszer** — jelenleg minden gomb a Salonicra visz
-   (`site.bookingUrl`). A saját foglaló elkészültekor ezt kell `/foglalas`-ra
-   átírni.
-5. **Domain + éles hosting** — még nincs kiválasztva.
-6. **Mobil ellenőrzés** valódi telefonon (a fejlesztés során nem volt
-   emulálható mobil viewport).
+4. **Domain** — jelenleg a Railway aldomainje él.
+5. **Átadás** — a Railway projekt Peter fiókján van, Dávidéra átvihető.
+6. **Mobil ellenőrzés** valódi telefonon.
