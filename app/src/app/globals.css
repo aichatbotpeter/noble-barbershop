@@ -27,6 +27,13 @@ html {
   scroll-padding-top: 5rem; /* a fix fejléc ne takarja az ugrás célját */
 }
 
+/* A böngészők a <fieldset>-nek automatikus `min-width: min-content`-et adnak,
+   ezért egy benne lévő vízszintesen görgethető sáv szétfeszítené a lapot.
+   Ezt nullázzuk, különben a foglaló nap-választója oldalra tolja az oldalt. */
+fieldset {
+  min-width: 0;
+}
+
 body {
   background: var(--color-paper);
   color: var(--color-ink);

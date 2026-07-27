@@ -182,7 +182,7 @@ export default function BookingForm() {
           <legend className="font-[family-name:var(--font-display)] text-xl font-semibold">
             2. Válassz napot
           </legend>
-          <div className="mt-6 flex snap-x gap-2 overflow-x-auto pb-2">
+          <div className="mt-6 flex w-full min-w-0 snap-x gap-2 overflow-x-auto pb-2">
             {days.map((d) => {
               const active = dateISO === d.iso;
               return (

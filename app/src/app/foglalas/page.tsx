@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function BookingPage() {
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="flex-1 bg-paper pb-24 pt-32 sm:pt-40">
         <div className="mx-auto max-w-3xl px-5 sm:px-8">
           <h1 className="h-section text-center">Időpontfoglalás</h1>

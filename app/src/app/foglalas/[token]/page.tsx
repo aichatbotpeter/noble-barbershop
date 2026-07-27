@@ -60,7 +60,7 @@ export default async function ManageBookingPage({
 
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="flex-1 bg-paper pb-24 pt-32 sm:pt-40">
         <div className="mx-auto max-w-2xl px-5 text-center sm:px-8">
           <h1 className="h-section">{text.title}</h1>

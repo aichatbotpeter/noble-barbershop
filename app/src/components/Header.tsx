@@ -13,7 +13,12 @@ const NAV = [
   { href: "#kapcsolat", label: "Kontakt" },
 ];
 
-export default function Header() {
+/**
+ * @param solid Világos hátterű aloldalakon (foglalás, kezelés) kötelező, mert
+ *   ott nincs sötét hero a fejléc alatt, és az áttetsző sávon a fehér
+ *   navigáció olvashatatlan lenne.
+ */
+export default function Header({ solid = false }: { solid?: boolean }) {
   // A hero fölött áttetsző, görgetés után tömör sötét sáv.
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,7 +40,9 @@ export default function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || menuOpen ? "bg-bar" : "bg-gradient-to-b from-black/45 to-transparent"
+        solid || scrolled || menuOpen
+          ? "bg-bar"
+          : "bg-gradient-to-b from-black/45 to-transparent"
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-[1400px] items-center gap-8 px-5 sm:px-8">
