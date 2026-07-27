@@ -11,6 +11,13 @@ export const site = {
   tagline: "Male Hairdressing & Barbering",
   city: "Kecskemét",
 
+  /**
+   * Hero-videó. Ha van felvétel a szalonról, tedd a fájlt a
+   * `public/videos/hero.mp4`-be, és írd ide: "/videos/hero.mp4".
+   * Amíg `null`, a hero a névfal-fotót mozgatja (Ken Burns).
+   */
+  heroVideo: null as string | null,
+
   /** A hero főcíme — kisbetűs, két tagmondat. */
   heroHeadline: "nyugodt tempó, pontos vágás",
   heroLead:

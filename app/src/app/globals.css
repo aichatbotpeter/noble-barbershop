@@ -136,16 +136,70 @@ button:focus-visible {
 }
 
 /* ------------------------------------------------------------------
-   Belépő animáció (IntersectionObserver kapcsolja)
+   Mozgás
+
+   A kiinduló eltolást a Reveal komponens adja inline stílusként (irányfüggő),
+   itt csak az áttűnés és a végállapot van.
 ------------------------------------------------------------------ */
 .reveal {
   opacity: 0;
-  transform: translateY(18px);
   transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .reveal.is-visible {
   opacity: 1;
   transform: none;
+}
+
+/* Ken Burns: lassú ráközelítés + sodródás. Állókép helyett mozgókép-érzet,
+   amíg nincs valódi videó a szalonról. */
+@keyframes kenburns {
+  0% {
+    transform: scale(1.16) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.3) translate3d(-1.6%, -1.4%, 0);
+  }
+  100% {
+    transform: scale(1.16) translate3d(0, 0, 0);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 34s ease-in-out infinite;
+}
+
+/* Lefelé mutató, lüktető görgetés-jelző a hero alján */
+@keyframes scrollhint {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(9px);
+    opacity: 1;
+  }
+}
+
+.animate-scrollhint {
+  animation: scrollhint 2.2s ease-in-out infinite;
+}
+
+/* Kép-felfedés maszk: alulról csúszik fel a takaró réteg */
+@keyframes unmask {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-scrollhint {
+    animation: none !important;
+  }
 }

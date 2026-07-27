@@ -4,41 +4,55 @@ import { site } from "@/lib/site";
 import { galleryImages } from "@/lib/gallery";
 import { InstagramIcon } from "./Icons";
 import Reveal from "./Reveal";
+import Parallax from "./Parallax";
 
 export default function Gallery() {
   const hasPhotos = galleryImages.length > 0;
 
   return (
-    <section id="galeria" className="bg-bar py-24 text-white sm:py-32">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8">
+    <section id="galeria" className="relative overflow-hidden bg-bar py-24 text-white sm:py-32">
+      {/* Hangulati háttér: a szalon fala erősen elmosva és lesötétítve */}
+      <div className="absolute inset-0 -z-10">
+        <Parallax speed={0.2} className="absolute inset-x-0 -top-32 bottom-[-8rem]">
+          <div className="relative h-full w-full">
+            <Image
+              src={asset("/images/wall-dark.jpg")}
+              alt=""
+              fill
+              sizes="100vw"
+              className="object-cover opacity-70"
+            />
+          </div>
+        </Parallax>
+        <div className="absolute inset-0 bg-bar/55" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <h2 className="h-section text-center text-white">Galéria</h2>
         </Reveal>
 
         {hasPhotos ? (
-          <div className="mt-16 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
+          // 2×2 fekete-fehér rács, hoverre visszaszíneződik — a referencia mintája
+          <div className="mt-16 grid gap-4 sm:gap-6 md:grid-cols-2">
             {galleryImages.map((img, i) => (
-              <Reveal
-                key={img.src}
-                delay={i * 70}
-                className={img.span === "wide" ? "col-span-2" : ""}
-              >
-                <div className="group relative aspect-[4/5] overflow-hidden bg-black">
+              <Reveal key={img.src} delay={(i % 2) * 120} from={i % 2 ? "right" : "left"}>
+                <div className="group relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={asset(img.src)}
                     alt={img.alt}
                     fill
-                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 384px"
-                    className="object-cover grayscale transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                    sizes="(max-width: 768px) 92vw, 560px"
+                    className="object-cover grayscale transition-all duration-[900ms] ease-out group-hover:scale-[1.06] group-hover:grayscale-0"
                   />
                 </div>
               </Reveal>
             ))}
           </div>
         ) : (
-          // Amíg nincsenek fotók, az Instagram viszi a szekciót — így nem
-          // marad üres rács. A képek bemásolásakor magától átvált a fenti ágra.
-          <Reveal delay={80}>
+          // Amíg nincsenek fotók, az Instagram viszi a szekciót — így nem marad
+          // üres rács. A képek bemásolásakor magától átvált a fenti ágra.
+          <Reveal delay={90}>
             <p className="mx-auto mt-8 max-w-xl text-center text-base leading-relaxed text-white/70 sm:text-lg">
               A friss munkák, fazonok és a szalon mindennapjai az Instagramon
               frissülnek — nézd meg, mit csinálunk.

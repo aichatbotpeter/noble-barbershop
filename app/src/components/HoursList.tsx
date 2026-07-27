@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { site } from "@/lib/site";
 
+/** Sötét háttéren jelenik meg (Kontakt szekció). */
 export default function HoursList() {
   // A mai napot csak beépülés után jelöljük ki — így nincs szerver/kliens eltérés.
   const [todayIndex, setTodayIndex] = useState<number | null>(null);
@@ -21,22 +22,22 @@ export default function HoursList() {
         return (
           <li
             key={h.day}
-            className={`flex items-baseline justify-between gap-4 border-b border-line py-3.5 last:border-b-0 ${
-              isToday ? "text-ink" : "text-ink-soft"
+            className={`flex items-baseline justify-between gap-4 border-b border-white/10 py-3 last:border-b-0 ${
+              isToday ? "text-white" : "text-white/65"
             }`}
           >
-            <span className="flex items-center gap-3 text-base">
+            <span className="flex items-center gap-3">
               {h.day}
               {isToday && (
-                <span className="nav-label rounded-full bg-gold/15 px-2.5 py-1 !text-[0.6rem] text-gold">
+                <span className="rounded-full bg-gold/25 px-2.5 py-0.5 text-[0.6rem] font-semibold uppercase tracking-[0.12em] text-gold-light">
                   Ma
                 </span>
               )}
             </span>
             <span
-              className={`text-base ${
-                closed ? "text-ink-soft/50" : isToday ? "font-semibold text-ink" : ""
-              }`}
+              className={
+                closed ? "text-white/35" : isToday ? "font-semibold text-gold-light" : ""
+              }
             >
               {closed ? "Zárva" : `${h.open} – ${h.close}`}
             </span>

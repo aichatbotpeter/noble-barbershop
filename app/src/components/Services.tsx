@@ -3,16 +3,20 @@ import Reveal from "./Reveal";
 
 export default function Services() {
   return (
-    <section id="arak" className="relative overflow-hidden bg-mist/40 py-24 sm:py-32">
+    <section
+      id="arak"
+      className="relative overflow-hidden bg-[radial-gradient(120%_90%_at_50%_0%,#ffffff_0%,#eef0f4_55%,#e4e6ec_100%)] py-24 sm:py-32"
+    >
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <h2 className="h-section text-center">Áraink</h2>
         </Reveal>
 
-        {/* Két hasáb, elválasztó vonalak nélkül — a referencia levegős ritmusa */}
-        <div className="mt-16 grid gap-x-16 gap-y-12 md:grid-cols-2">
+        {/* Két hasáb, elválasztó vonalak nélkül — a referencia levegős ritmusa.
+            A késleltetés soronként nő, így hullámban úsznak be. */}
+        <div className="mt-16 grid gap-x-20 gap-y-14 md:grid-cols-2">
           {site.services.map((service, i) => (
-            <Reveal key={service.name} delay={(i % 2) * 80}>
+            <Reveal key={service.name} delay={(i % 2) * 110} from={i % 2 ? "right" : "left"}>
               <article>
                 <div className="flex items-baseline justify-between gap-6">
                   <h3 className="font-[family-name:var(--font-display)] text-lg font-bold sm:text-xl">
