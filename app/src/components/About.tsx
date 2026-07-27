@@ -32,16 +32,20 @@ export default function About() {
         <div className="flex items-center px-5 py-20 sm:px-10 lg:py-28 xl:px-20">
           <div className="mx-auto max-w-xl">
             <Reveal from="right">
-              <h2 className="h-section flex flex-wrap items-baseline gap-x-3">
+              {/*
+                A TELJES logó helyett csak a NOBLE szó kerül a mondatba —
+                a barber pole és a szlogen kicsiben zsúfolt volt, és nem ült
+                a sorban. A szó magassága a nagybetűk magasságára van állítva,
+                így pontosan a szöveg alapvonalán áll.
+              */}
+              <h2 className="h-section flex flex-wrap items-baseline gap-x-[0.28em]">
                 <span>a</span>
                 <Image
-                  src={asset("/images/noble-logo-dark.png")}
+                  src={asset("/images/noble-wordmark-dark.png")}
                   alt="NOBLE"
                   width={387}
-                  height={256}
-                  // A logóban a szó alatt van a szlogen is, ezért a talpvonalhoz
-                  // igazítjuk, különben „lóg" a sorban.
-                  className="h-[1.15em] w-auto translate-y-[0.14em]"
+                  height={61}
+                  className="h-[0.70em] w-auto translate-y-[0.02em]"
                 />
                 <span>-ről</span>
               </h2>
