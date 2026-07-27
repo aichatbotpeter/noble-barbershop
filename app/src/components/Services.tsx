@@ -1,12 +1,24 @@
+import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { site, formatPrice } from "@/lib/site";
 import Reveal from "./Reveal";
 
 export default function Services() {
   return (
-    <section
-      id="arak"
-      className="relative overflow-hidden bg-[radial-gradient(120%_90%_at_50%_0%,#ffffff_0%,#eef0f4_55%,#e4e6ec_100%)] py-24 sm:py-32"
-    >
+    <section id="arak" className="relative overflow-hidden bg-paper py-24 sm:py-32">
+      {/* A szalon névfala háttérként, erősen világosítva — márkás textúra,
+          de az árlista olvashatósága nem romlik. */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src={asset("/images/arak-bg.jpg")}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-paper/[0.90]" />
+      </div>
+
       <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
         <Reveal>
           <h2 className="h-section text-center">Áraink</h2>

@@ -17,8 +17,9 @@ export const site = {
    */
   heroVideo: "/videos/hero.mp4" as string | null,
 
-  /** Rövidebb betét a Rólunk szekcióban (fogadtatás + kávé). Csak asztali nézetben. */
-  aboutVideo: "/videos/about.mp4" as string | null,
+  /** Rólunk-betét. Jelenleg NINCS használatban: a kis videó-téglalap helyett
+   * a szekció kétoszlopos lett, bal oldalon egy fotóval. */
+  aboutVideo: null as string | null,
 
   /** A hero főcíme — kisbetűs, két tagmondat. */
   heroHeadline: "nyugodt tempó, pontos vágás",
