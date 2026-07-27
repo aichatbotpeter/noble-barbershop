@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 import { galleryImages } from "@/lib/gallery";
 import { InstagramIcon } from "./Icons";
@@ -24,7 +25,7 @@ export default function Gallery() {
               >
                 <div className="group relative aspect-[4/5] overflow-hidden bg-black">
                   <Image
-                    src={img.src}
+                    src={asset(img.src)}
                     alt={img.alt}
                     fill
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 384px"

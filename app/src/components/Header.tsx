@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 import { InstagramIcon, FacebookIcon } from "./Icons";
 
@@ -40,7 +41,7 @@ export default function Header() {
       <div className="mx-auto flex h-[72px] max-w-[1400px] items-center gap-8 px-5 sm:px-8">
         <a href="#top" className="shrink-0" aria-label={`${site.fullName} — főoldal`}>
           <Image
-            src="/images/noble-logo.png"
+            src={asset("/images/noble-logo.png")}
             alt={site.fullName}
             width={387}
             height={256}

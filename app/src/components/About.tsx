@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 import Reveal from "./Reveal";
 
@@ -30,7 +31,7 @@ export default function About() {
           <Reveal className="mx-auto w-full max-w-[280px] lg:mx-0">
             <div className="relative aspect-square overflow-hidden">
               <Image
-                src={site.master.photo}
+                src={asset(site.master.photo)}
                 alt={`${site.master.name} — ${site.master.role}`}
                 fill
                 sizes="280px"

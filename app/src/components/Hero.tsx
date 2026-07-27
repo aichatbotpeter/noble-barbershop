@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { site } from "@/lib/site";
 
 export default function Hero() {
@@ -13,7 +14,7 @@ export default function Hero() {
           NOBLE felirat a felső harmadban maradjon — a szöveg alatta kap helyet.
         */}
         <Image
-          src="/images/shop-wall.jpg"
+          src={asset("/images/shop-wall.jpg")}
           alt="A NOBLE Barbershop névfala a szalonban"
           fill
           priority

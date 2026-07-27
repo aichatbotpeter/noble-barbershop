@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { site, fullAddress } from "@/lib/site";
 import { InstagramIcon, FacebookIcon } from "./Icons";
 
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8">
         <div className="flex flex-col items-center gap-8 text-center">
           <Image
-            src="/images/noble-logo.png"
+            src={asset("/images/noble-logo.png")}
             alt={site.fullName}
             width={387}
             height={256}
