@@ -27,7 +27,7 @@ export default function Gallery() {
         <div className="absolute inset-0 bg-bar/55" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-5 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
           <h2 className="h-section text-center text-white">Galéria</h2>
         </Reveal>
@@ -35,28 +35,27 @@ export default function Gallery() {
         {hasPhotos ? (
           <>
             {/*
-              A képek SZÍNESEN és a saját 16:9 arányukban jelennek meg — nincs
-              négyzetes/4:3-as vágás, mert a forrás (a reklámfilm kockái) 16:9,
-              és a kényszerített arány levágná a kompozíció szélét.
+              A fotók ÁLLÓ tájolásúak (2:3), ezért a rács is az — így semmi
+              nem esik le a kompozícióból. Színesen jelennek meg, hoverre
+              finoman ráközelítenek.
 
-              Két oszlop, hogy elég nagyok legyenek: így egy kép ~570 CSS px,
-              retina kijelzőn ~1140 px — ezt az 1280 px-es forrás még fedi,
-              tehát nem lesz felnagyítva.
+              Három oszlop 1280 px-es sávban: egy kép ~400 CSS px, retinán
+              ~800 px — ezt a 941 px-es forrás fedi, tehát nincs felnagyítás.
             */}
-            <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+            <div className="mt-16 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
               {galleryImages.map((img, i) => (
                 <Reveal
                   key={img.src}
-                  delay={(i % 2) * 110}
-                  from={i % 2 === 0 ? "left" : "right"}
+                  delay={(i % 3) * 90}
+                  from={i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up"}
                 >
-                  <figure className="group relative aspect-video overflow-hidden bg-black">
+                  <figure className="group relative aspect-[2/3] overflow-hidden bg-black">
                     <Image
                       src={asset(img.src)}
                       alt={img.alt}
                       fill
                       quality={90}
-                      sizes="(max-width: 640px) 92vw, (max-width: 1152px) 48vw, 570px"
+                      sizes="(max-width: 640px) 48vw, (max-width: 1024px) 46vw, 400px"
                       className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.05]"
                     />
                   </figure>
