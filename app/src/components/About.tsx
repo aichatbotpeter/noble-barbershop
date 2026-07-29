@@ -32,27 +32,33 @@ export default function About() {
         <div className="flex items-center px-5 py-20 sm:px-10 lg:py-28 xl:px-20">
           <div className="mx-auto max-w-xl">
             <Reveal from="right">
+              <p className="font-[family-name:var(--font-display)] text-xs font-semibold uppercase tracking-[0.3em] text-gold">
+                Rólunk
+              </p>
+
               {/*
-                A TELJES logó helyett csak a NOBLE szó kerül a mondatba —
-                a barber pole és a szlogen kicsiben zsúfolt volt, és nem ült
-                a sorban. A szó magassága a nagybetűk magasságára van állítva,
-                így pontosan a szöveg alapvonalán áll.
+                A logóból csak a NOBLE szó kerül a mondatba. A körülötte lévő
+                „A" és „-ről" SZÁNDÉKOSAN könnyebb vágású és ritkított: a vastag
+                Montserrat mellett a vékony talpas logó idegenül hatott.
               */}
-              <h2 className="h-section flex flex-wrap items-baseline gap-x-[0.28em]">
-                <span>a</span>
+              <h2 className="mt-4 flex flex-wrap items-baseline gap-x-[0.3em] font-[family-name:var(--font-display)] text-[clamp(2rem,5vw,3rem)] font-normal leading-[1.12] tracking-[0.02em]">
+                <span>A</span>
                 <Image
                   src={asset("/images/noble-wordmark-dark.png")}
                   alt="NOBLE"
                   width={387}
                   height={61}
-                  className="h-[0.70em] w-auto translate-y-[0.02em]"
+                  className="h-[0.72em] w-auto translate-y-[0.02em]"
                 />
                 <span>-ről</span>
               </h2>
+
+              {/* Arany hajszálvonal — ugyanaz a motívum, mint a logó vonalai */}
+              <div className="mt-7 h-px w-16 bg-gold" />
             </Reveal>
 
             <Reveal from="right" delay={90}>
-              <p className="mt-8 text-lg leading-relaxed text-ink sm:text-xl">
+              <p className="mt-7 text-lg leading-relaxed text-ink sm:text-xl">
                 Klasszikus borbélyszakma és mai fazonok — Kecskemét szívében, az
                 Izsáki úton. Egyszerre egy vendég, foglalt időpontra.
               </p>
@@ -81,17 +87,22 @@ export default function About() {
               </Reveal>
             </div>
 
+            {/* Névjegy — vékony vonallal elválasztva, mint egy aláírás */}
             <Reveal from="right" delay={290}>
-              <p className="mt-10 font-[family-name:var(--font-display)] text-lg font-semibold">
-                {site.master.name}
-              </p>
-              <p className="mt-1 text-sm text-ink-soft">{site.master.role}</p>
+              <div className="mt-12 border-t border-line pt-7">
+                <p className="font-[family-name:var(--font-display)] text-lg font-semibold">
+                  {site.master.name}
+                </p>
+                <p className="mt-1 text-sm uppercase tracking-[0.16em] text-ink-soft">
+                  {site.master.role}
+                </p>
+              </div>
 
               <a
                 href={site.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-dark mt-8"
+                className="btn btn-dark mt-9"
               >
                 Foglalj időpontot
               </a>
