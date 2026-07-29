@@ -41,8 +41,22 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center px-6 pb-28 pt-[46vh] text-center">
+        {/*
+          A hero fő eleme maga a logó, nem egy szöveges főcím. A h1 megmarad
+          a kereső és a képernyőolvasók miatt — a képnek van alt szövege.
+        */}
         <Reveal from="none">
-          <h1 className="h-hero text-white [text-wrap:balance]">{site.heroHeadline}</h1>
+          <h1 className="sr-only">
+            {site.fullName} — férfi fodrászat és barbershop {site.city}en
+          </h1>
+          <Image
+            src={asset("/images/noble-logo.png")}
+            alt={`${site.fullName} — férfi fodrászat ${site.city}en`}
+            width={387}
+            height={256}
+            priority
+            className="w-[clamp(15rem,38vw,27rem)]"
+          />
         </Reveal>
 
         <Reveal delay={220} from="none">
