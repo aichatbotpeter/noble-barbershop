@@ -66,7 +66,7 @@ export const site = {
       en: "Haircut",
       price: 5500,
       minutes: 45,
-      desc: "Konzultáció, mosás, precíz vágás és végigvitt fazonigazítás.",
+      desc: "Személyre szabott hajvágás, ollóval, géppel, általad választott termékkel finishelve.",
       featured: false,
     },
     {
@@ -90,7 +90,7 @@ export const site = {
       en: "Beard trim",
       price: 3500,
       minutes: 30,
-      desc: "Kontúrozás, formázás és ápolás borotvával, forró törölközővel.",
+      desc: "Kontúrozás, formázás és ápolás borotvával.",
       featured: false,
     },
     {
@@ -98,7 +98,9 @@ export const site = {
       en: "Long haircut",
       price: 6500,
       minutes: 60,
-      desc: "Hosszabb hajhoz szabott vágás, több idővel és odafigyeléssel.",
+      desc:
+        "Hosszabb fazon vágása (10 cm fölötti hajhossz), ahol az oldalsó részek " +
+        "vágása is ollóval, szekcionálva történik.",
       featured: false,
     },
     {
@@ -106,7 +108,9 @@ export const site = {
       en: "Creative haircut",
       price: 6500,
       minutes: 60,
-      desc: "Egyedi elképzelés, mintázás — ha valami sajátra vágysz.",
+      desc:
+        "Személyre szabott hajvágás ollóval és géppel. Dizájn mintavágás " +
+        "géppel és pengével.",
       featured: false,
     },
     {
