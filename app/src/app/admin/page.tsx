@@ -8,6 +8,15 @@ import { site, formatPrice } from "@/lib/site";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Admin", robots: { index: false, follow: false } };
 
+/**
+ * A szerver-akciók önálló HTTP-végpontok: attól, hogy csak a belépett nézetben
+ * rendereljük őket, még meghívhatók süti nélküli kliensből is. Ezért minden
+ * módosító akció a saját törzsében is ellenőrzi a munkamenetet.
+ */
+async function assertAdmin() {
+  if (!(await isLoggedIn())) throw new Error("Nincs jogosultság");
+}
+
 /** A heti nyitvatartás 7 sorának megléte — első betöltéskor a site.ts-ből tölt. */
 async function ensureWeeklyHours() {
   const count = await prisma.weeklyHour.count();
@@ -88,6 +97,7 @@ export default async function AdminPage() {
 
   async function saveSettings(formData: FormData) {
     "use server";
+    await assertAdmin();
     await setSetting(
       SETTING_KEYS.notificationEmail,
       String(formData.get("notificationEmail") ?? "").trim(),
@@ -100,6 +110,7 @@ export default async function AdminPage() {
 
   async function saveHours(formData: FormData) {
     "use server";
+    await assertAdmin();
     for (let day = 1; day <= 7; day++) {
       const isOpen = formData.get(`open_${day}`) === "on";
       const from = labelToMinutes(String(formData.get(`from_${day}`) ?? ""));
@@ -116,6 +127,7 @@ export default async function AdminPage() {
 
   async function addOverride(formData: FormData) {
     "use server";
+    await assertAdmin();
     const dateStr = String(formData.get("date") ?? "");
     if (!/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return;
     const [y, m, d] = dateStr.split("-").map(Number);
@@ -146,6 +158,7 @@ export default async function AdminPage() {
 
   async function removeOverride(formData: FormData) {
     "use server";
+    await assertAdmin();
     const iso = String(formData.get("date") ?? "");
     const [y, m, d] = iso.split("-").map(Number);
     await prisma.dateOverride.delete({ where: { date: new Date(Date.UTC(y, m - 1, d)) } });
@@ -154,6 +167,7 @@ export default async function AdminPage() {
 
   async function cancelBooking(formData: FormData) {
     "use server";
+    await assertAdmin();
     const id = String(formData.get("id") ?? "");
     await prisma.booking.update({
       where: { id },
