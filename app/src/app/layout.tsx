@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://noble-barbershop.hu";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.noblebarbershop.hu";
 const description =
   "Férfi fodrászat és barbershop Kecskeméten, az Izsáki út 2. alatt. " +
   "Hajvágás, szakálligazítás, kreatív fazonok — Széman Dávid. Online időpontfoglalás.";
