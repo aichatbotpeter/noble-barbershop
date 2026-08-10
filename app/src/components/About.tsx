@@ -59,36 +59,51 @@ export default function About() {
 
             <Reveal from="right" delay={90}>
               <p className="mt-7 text-lg leading-relaxed text-ink sm:text-xl">
-                Klasszikus borbélyszakma és mai fazonok — Kecskemét szívében, az
-                Izsáki úton. Egyszerre egy vendég, foglalt időpontra.
+                Klasszikus borbélyélmény, modern fazonok — Kecskemét szívében, az
+                Izsáki úton.
               </p>
             </Reveal>
 
             <div className="mt-8 space-y-6 text-base leading-relaxed text-ink-soft">
               <Reveal from="right" delay={140}>
                 <p>
-                  A NOBLE nem futószalag. Van idő végigbeszélni, mit szeretnél, és
-                  van idő rendesen megcsinálni. Ezért dolgozunk bejelentkezés
-                  alapján, és ezért nem sürgetünk senkit.
+                  A NOBLE Barbershop nem futószalag. Nálunk minden vendégre jut idő
+                  és figyelem. Megbeszéljük, mit szeretnél, szakmai szempontok
+                  alapján segítünk a megfelelő fazon kiválasztásában, majd mindezt
+                  precízen, a részletekre odafigyelve valósítjuk meg.
                 </p>
               </Reveal>
-              <Reveal from="right" delay={190}>
+              <Reveal from="right" delay={180}>
                 <p>
-                  Pontos átmenetek, tiszta kontúrok, szakállformázás borotvával és
-                  forró törölközővel. Ha nem tudod pontosan, mi állna jól, arra is
-                  van szakmai vélemény.
+                  Éppen ezért kizárólag bejelentkezés alapján dolgozunk, egyszerre
+                  egy vendéggel. Nincs sietség, nincs kapkodás — csak a rád szánt
+                  idő és a minőségi munka.
                 </p>
               </Reveal>
-              <Reveal from="right" delay={240}>
+              <Reveal from="right" delay={220}>
                 <p>
-                  Hisszük, hogy egy hajvágás nem tíz perc a napodból, hanem az a
-                  pont, ahonnan rendben van a hét.
+                  Precíz átmenetek, tiszta kontúrok, gondosan formázott szakáll,
+                  hagyományos borotválás. A klasszikus borbélyszakma alapjai, a mai
+                  igényekhez igazítva.
+                </p>
+              </Reveal>
+              <Reveal from="right" delay={260}>
+                <p>
+                  Ha pedig még nem tudod pontosan, mi állna jól, abban is
+                  számíthatsz ránk. A megfelelő fazon nem mindig az, amit elsőre
+                  elképzelsz — mi segítünk megtalálni azt, ami valóban hozzád illik.
+                </p>
+              </Reveal>
+              <Reveal from="right" delay={300}>
+                <p>
+                  Mert egy hajvágás nem csupán tíz perc a napodból. Hanem az a
+                  pillanat, amitől rendben érzed magad a hét hátralévő részében.
                 </p>
               </Reveal>
             </div>
 
             {/* Névjegy — vékony vonallal elválasztva, mint egy aláírás */}
-            <Reveal from="right" delay={290}>
+            <Reveal from="right" delay={350}>
               <div className="mt-12 border-t border-line pt-7">
                 <p className="font-[family-name:var(--font-display)] text-lg font-semibold">
                   {site.master.name}

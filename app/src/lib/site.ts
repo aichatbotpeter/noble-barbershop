@@ -24,8 +24,8 @@ export const site = {
   /** A hero főcíme — kisbetűs, két tagmondat. */
   heroHeadline: "nyugodt tempó, pontos vágás",
   heroLead:
-    "Férfi fodrászat és barbershop Kecskemét szívében. Egyszerre egy vendég, " +
-    "foglalt időpontra — hogy a végén tényleg az legyen, amit szerettél volna.",
+    "Férfi fodrászat és barbershop Kecskemét szívében. Egy vendég, egy időpont, " +
+    "osztatlan figyelem — a végeredmény pedig pontosan olyan, amilyennek elképzelted.",
 
   // Saját foglalórendszer (a Salonicot leváltotta).
   bookingUrl: "/foglalas",
