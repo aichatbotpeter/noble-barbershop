@@ -3,7 +3,7 @@
 Weboldal és saját időpontfoglaló a kecskeméti **NOBLE | Barbershop**-nak
 (tulajdonos: **Széman Dávid**). A Salonicot leváltotta.
 
-**Élő:** https://web-production-f3e71.up.railway.app
+**Élő:** https://www.noblebarbershop.hu (a `noblebarbershop.hu` átirányít ide)
 **Admin:** `/admin` (jelszó: `ADMIN_PASSWORD` env-változó)
 
 - **Kód:** `app/` — Next.js 16 + React 19 + TypeScript + Tailwind v4 + Prisma 7 + PostgreSQL
@@ -20,6 +20,34 @@ Railway felületén, vagy GraphQL-lel:
 ```
 mutation { serviceInstanceDeployV2(environmentId: "<env>", serviceId: "<web>") }
 ```
+
+## Domain (noblebarbershop.hu)
+
+A domain a **Tárhely.Eu**-nál van (ÜgyfélAdmin → Domainek → DNS-kezelő), a zóna
+névszerverei `ns.tns1-4.eu`. A releváns rekordok:
+
+| Típus | Név | Érték | Miért |
+|---|---|---|---|
+| CNAME | `www` | `m2oznryc.up.railway.app` | ide mutat az oldal |
+| TXT | `_railway-verify.www` | `railway-verify=3992b13a…` | **a Railway ownership-ellenőrzése** |
+| TXT | `_railway-verify` | `railway-verify=a652598f…` | ua. az apexre |
+| Átirányítás | *(apex)* | `https://www.noblebarbershop.hu` | apex → www |
+
+⚠️ **A TXT rekord nem opcionális.** A Railway 2026 óta CNAME + TXT párost vár;
+csak CNAME-mel a domain `verified: false` marad, a tanúsítvány örökre „ISSUING"
+állapotban áll, és a domain 404-et ad. Ellenőrzés:
+
+```
+domains(projectId, environmentId, serviceId){ customDomains{ domain status{ verified certificateStatus } } }
+```
+
+⚠️ **Az apex csak HTTP-n megy.** A Tárhely.Eu DNS-e nem tud ALIAS/ANAME-et, a
+Railway pedig apexre is csak CNAME-et fogad el — ezért ott az „Átirányítás"
+rekord van, ami viszont a szolgáltató szerint HTTPS-en **nem** érhető el.
+`http://noblebarbershop.hu` → 301 → `https://www.noblebarbershop.hu` ✅,
+`https://noblebarbershop.hu` → tanúsítvány-hiba ❌. A tiszta megoldás a zóna
+átvitele Cloudflare-re (CNAME flattening), akkor az apex is natívan mehet
+Railwayre — az apex custom domain a Railwayen már fel van véve és verifikált.
 
 ## Dupla foglalás elleni védelem
 
@@ -91,6 +119,8 @@ kódoltuk át H.264-re.
    kérje a foglalás-értesítőket.
 3. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
    értékelést tilos valódiként közölni (Fttv.).
-4. **Domain** — jelenleg a Railway aldomainje él.
+4. **Apex HTTPS** — `https://noblebarbershop.hu` tanúsítvány-hibát ad (lásd a
+   Domain szakaszt). Megoldás: a zóna átvitele Cloudflare-re.
 5. **Átadás** — a Railway projekt Peter fiókján van, Dávidéra átvihető.
+   A domainnél az **auto. hosszabbítás KI van kapcsolva** (lejár: 2027-07-29).
 6. **Mobil ellenőrzés** valódi telefonon.
