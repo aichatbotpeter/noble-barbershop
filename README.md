@@ -1,7 +1,8 @@
 # NOBLE | Barbershop — weboldal + foglalórendszer
 
-Weboldal és saját időpontfoglaló a kecskeméti **NOBLE | Barbershop**-nak
-(tulajdonos: **Széman Dávid**). A Salonicot leváltotta.
+Weboldal a kecskeméti **NOBLE | Barbershop**-nak (tulajdonos: **Széman Dávid**).
+**Az időpontfoglalás a Salonicban történik** — lásd a lap alján. Készült egy
+saját foglalórendszer is; bent maradt a kódban, de nincs használatban.
 
 **Élő:** https://www.noblebarbershop.hu (a `noblebarbershop.hu` átirányít ide)
 **Admin:** `/admin` (jelszó: `ADMIN_PASSWORD` env-változó)
@@ -28,7 +29,7 @@ névszerverei `ns.tns1-4.eu`. A releváns rekordok:
 
 | Típus | Név | Érték | Miért |
 |---|---|---|---|
-| CNAME | `www` | `m2oznryc.up.railway.app` | ide mutat az oldal |
+| CNAME | `www` | `540es4zp.up.railway.app` | ide mutat az oldal |
 | TXT | `_railway-verify.www` | `railway-verify=3992b13a…` | **a Railway ownership-ellenőrzése** |
 | TXT | `_railway-verify` | `railway-verify=a652598f…` | ua. az apexre |
 | Átirányítás | *(apex)* | `https://www.noblebarbershop.hu` | apex → www |
@@ -112,18 +113,18 @@ kódoltuk át H.264-re.
 
 ## Ami még hátravan
 
-1. **⚠️ E-mail küldés** — a `RESEND_API_KEY` üres, ezért MOST NEM MEGY KI levél
-   (a foglalás létrejön, a kód csak logol). Kell egy Resend kulcs és egy igazolt
-   feladó-domain, majd a `RESEND_API_KEY` + `RESEND_FROM` beállítása a Railwayen.
-2. **Értesítési e-mail cím** — Dávidnak az `/admin` oldalon be kell írnia, hova
-   kérje a foglalás-értesítőket.
-3. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
+1. ~~E-mail küldés / értesítési cím~~ — **tárgytalan**: a foglalást a Salonic
+   kezeli, az értesítőket is az küldi. (Ha a saját foglaló valaha visszakerül,
+   újra kell egy Resend kulcs + igazolt feladó-domain, `RESEND_API_KEY` +
+   `RESEND_FROM`. Kliensnek MINDIG saját Resend fiók, nem Peti pandatalk.hu-s
+   fiókja.)
+2. **Vendégvélemények** — 3-5 VALÓDI Google/Facebook vélemény. Kitalált
    értékelést tilos valódiként közölni (Fttv.).
-4. **Apex HTTPS** — `https://noblebarbershop.hu` tanúsítvány-hibát ad (lásd a
+3. **Apex HTTPS** — `https://noblebarbershop.hu` tanúsítvány-hibát ad (lásd a
    Domain szakaszt). Megoldás: a zóna átvitele Cloudflare-re.
-5. **Átadás** — a Railway projekt Peter fiókján van, Dávidéra átvihető.
+4. **Átadás** — a Railway projekt Peter fiókján van, Dávidéra átvihető.
    A domainnél az **auto. hosszabbítás KI van kapcsolva** (lejár: 2027-07-29).
-6. **Mobil ellenőrzés** valódi telefonon.
+5. **Mobil ellenőrzés** valódi telefonon.
 
 ## ⚠️ A foglalás a SALONICBAN történik (2026-08-11 óta)
 
