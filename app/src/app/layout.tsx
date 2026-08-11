@@ -107,6 +107,20 @@ function localBusinessJsonLd() {
       price: s.price,
       priceCurrency: "HUF",
     })),
+    // A foglalás a Salonicban történik — a Google innen tudja meg, hova vigye.
+    potentialAction: {
+      "@type": "ReserveAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: site.bookingUrl,
+        inLanguage: "hu-HU",
+        actionPlatform: [
+          "https://schema.org/DesktopWebPlatform",
+          "https://schema.org/MobileWebPlatform",
+        ],
+      },
+      result: { "@type": "Reservation", name: "Időpontfoglalás" },
+    },
   };
 }
 

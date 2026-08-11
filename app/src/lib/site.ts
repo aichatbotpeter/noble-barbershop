@@ -27,8 +27,18 @@ export const site = {
     "Férfi fodrászat és barbershop Kecskemét szívében. Egy vendég, egy időpont, " +
     "osztatlan figyelem — a végeredmény pedig pontosan olyan, amilyennek elképzelted.",
 
-  // Saját foglalórendszer (a Salonicot leváltotta).
-  bookingUrl: "/foglalas",
+  /**
+   * A foglalás a Salonicban történik (2026-08-11 óta újra).
+   *
+   * A `/booking/start` egyből a szolgáltatás-választóra visz, nem a Salonic
+   * saját kezdőoldalára. Minden erre mutató gomb `target="_blank"` —
+   * külső oldal, ne vigyük el róla a látogatót véglegesen.
+   *
+   * A saját foglalórendszer (`/foglalas`, `/kezeles`, `/admin`, `/api/*`)
+   * BENT MARADT a kódban, csak nem hivatkozik rá semmi. Visszakapcsolni
+   * ennek az egy sornak az átírásával lehet.
+   */
+  bookingUrl: "https://noble-barbershop-david.salonic.hu/booking/start",
 
   contact: {
     phone: "+36 30 483 8786",

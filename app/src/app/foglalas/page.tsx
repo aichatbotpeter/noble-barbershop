@@ -3,10 +3,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BookingForm from "@/components/BookingForm";
 
+/**
+ * A saját foglaló 2026-08-11 óta NEM aktív: a foglalás a Salonicban történik
+ * (`site.bookingUrl`), és erre az oldalra semmi nem hivatkozik. A kód azért
+ * maradt bent, hogy egy sor átírásával visszakapcsolható legyen — de amíg
+ * árván áll, a keresőkből ki kell zárni, különben a Google indexelné és
+ * ütközne az igazi foglalási úttal.
+ */
 export const metadata: Metadata = {
   title: "Időpontfoglalás",
   description:
     "Foglalj időpontot online a NOBLE Barbershopba — Kecskemét, Izsáki út 2. Hajvágás, szakálligazítás, kreatív fazonok.",
+  robots: { index: false, follow: false },
 };
 
 export default function BookingPage() {
