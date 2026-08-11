@@ -128,7 +128,8 @@ export const site = {
       en: "Haircut for Kids",
       price: 4500,
       minutes: 30,
-      desc: "Türelemmel, nyugodt tempóban a legfiatalabb vendégeknek.",
+      // A „10 éves korig" a Salonicból jön — enélkül a szülő rossz áron foglal.
+      desc: "Türelemmel, nyugodt tempóban a legfiatalabb vendégeknek — 10 éves korig.",
       featured: false,
     },
   ],
