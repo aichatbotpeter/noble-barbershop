@@ -124,3 +124,37 @@ kódoltuk át H.264-re.
 5. **Átadás** — a Railway projekt Peter fiókján van, Dávidéra átvihető.
    A domainnél az **auto. hosszabbítás KI van kapcsolva** (lejár: 2027-07-29).
 6. **Mobil ellenőrzés** valódi telefonon.
+
+## ⚠️ A foglalás a SALONICBAN történik (2026-08-11 óta)
+
+A saját foglalórendszer **nincs használatban**. Minden „Foglalj" gomb ide megy:
+
+```
+https://noble-barbershop-david.salonic.hu/booking/start
+```
+
+Egyetlen helyen állítható: `app/src/lib/site.ts` → `bookingUrl`.
+
+- A `/booking/start` egyből a szolgáltatás-választóra visz (a Salonic
+  kezdőoldala helyett). Minden gomb `target="_blank"`.
+- A Salonic foglalóoldala **beágyazható is** (`X-Frame-Options: ALLOWALL`,
+  `frame-ancestors *`) — kipróbálva működik, de a Salonic saját menüsora is
+  látszana benne, ezért maradt az átirányítás.
+- **A Salonicnak NINCS publikus API-ja.** Lebegő widgethez a kódot a Salonic
+  adminból kell kimásolni: *Online bejelentkezés beállításai* → a borítókép
+  alatti „online bejelentkezés widget" mező.
+
+### A saját foglalórendszer sorsa
+A kód **bent maradt** (`/foglalas`, `/foglalas/[token]`, `/kezeles/[ownerToken]`,
+`/admin`, `/api/availability`, `/api/bookings`, Prisma, Postgres), csak **semmi
+nem hivatkozik rá**, és a `/foglalas` `noindex`-et kapott, hogy ne ütközzön az
+igazi foglalási úttal. Visszakapcsolás = a `bookingUrl` visszaírása `/foglalas`-ra.
+
+Következmény: a Postgres service továbbra is fut (költség), és az `/admin`
+publikusan elérhető — ezért kapott erős jelszót és szerver-akció-szintű
+jogosultság-ellenőrzést.
+
+### Árlista ↔ Salonic
+A weboldal árlistája **kézzel tartott** másolat; a foglalás a Salonic adatai
+szerint történik. Áreltérésnél a Salonic az igazság. 2026-08-11-én mind a 7
+tétel ára és időtartama egyezett.
