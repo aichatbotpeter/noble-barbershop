@@ -9,6 +9,7 @@ import { InstagramIcon, FacebookIcon } from "./Icons";
 const NAV = [
   { href: "#rolunk", label: "Rólunk" },
   { href: "#arak", label: "Árak" },
+  { href: "#referenciak", label: "Referenciák" },
   { href: "#galeria", label: "Galéria" },
   { href: "#kapcsolat", label: "Kontakt" },
 ];
