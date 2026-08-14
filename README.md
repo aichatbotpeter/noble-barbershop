@@ -64,7 +64,8 @@ Három rétegben:
 | Amit módosítani akarsz | Fájl |
 |---|---|
 | Ár, szolgáltatás, nyitvatartás, telefon, cím, közösségi linkek | `app/src/lib/site.ts` |
-| Galéria képei | `app/src/lib/gallery.ts` + `app/public/images/gallery/` |
+| Galéria képei (a szalon hangulata) | `app/src/lib/gallery.ts` + `app/public/images/gallery/` |
+| Referenciák (kész munkák) | `app/src/lib/references.ts` + `app/public/images/referenciak/` |
 | Vendégvélemények | `app/src/lib/testimonials.ts` |
 | Színek, betűtípusok, gombok | `app/src/app/globals.css` |
 | SEO / megosztási kép | `app/src/app/layout.tsx`, `opengraph-image.tsx` |
@@ -75,8 +76,9 @@ oldal minden pontja (beleértve a Google-nek szóló strukturált adatot) onnan 
 ## Arculat
 
 A dizájn a **`fadedbarbershopbp.com`** (budapesti Faded) irányát követi: világos,
-levegős, fotó-vezérelt felület. Szekciórend: hero → Rólunk → Áraink → Galéria
-(sötét) → Kontakt.
+levegős, fotó-vezérelt felület. Szekciórend: hero → Rólunk → Áraink →
+Referenciák (szürke) → Galéria (sötét) → Kontakt. A tónus szekciónként
+sötétedik: fehér → `#d7d9e0` → `#101a16` → fekete lábléc.
 
 - **Betűk:** Montserrat (címek 600, árak 900, navigáció verzál) + DM Sans (szöveg)
 - **Címek kisbetűsek/mondatkezdésűek**, nem verzálisak — ez a referencia egyik
@@ -96,6 +98,28 @@ a névfal-fotót mozgatja lassan (Ken Burns).
 
 **Mozgás:** parallax hátterek (`Parallax.tsx`), irányfüggő és lépcsőzetes
 belépő animációk (`Reveal.tsx`). Csökkentett mozgás beállításnál mind kikapcsol.
+
+### Új referencia-fotó felvétele
+
+```bash
+py app/scripts/prep-reference-photos.py <forras-mappa> 9   # 9 = a kovetkezo szabad sorszam
+```
+
+A script mindent elintéz, ami a nyers telefonos fotó és a weboldal között kell:
+Display P3 → sRGB (különben túltelített a bőrtónus), 3:4-re vágás felfelé húzva
+(a rács 3:4 — ami nem az, azt a CSS vágná, akár a fej tetejét), 1400 px-re
+kicsinyítés, utóélesítés, EXIF (és vele a GPS) eldobása. Utána a fájlokat vedd
+fel `app/src/lib/references.ts`-be, beszédes `alt` szöveggel.
+
+**Párosával tegyél be képet:** a rács mobilon 2, asztalon 4 oszlopos — páratlan
+darabszámnál marad egy magára hagyott kép az utolsó sorban.
+
+⚠️ **`images.qualities`:** a Next 16 óta ennek alapértéke `[75]`, és a
+`quality={90}` prop **némán** ehhez igazodik. Ezért van a `next.config.ts`-ben
+`images: { qualities: [75, 90] }`. Ha valaki kiveszi, a fotók halkan
+visszaesnek gyengébb minőségre — a build zöld marad. Ellenőrzés élesben:
+`curl -s https://www.noblebarbershop.hu/ | grep -o '_next/image?[^" ]*' | head`
+→ `q=90` legyen benne.
 
 ## Arculati fájlok
 
